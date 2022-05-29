@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Tal og algebra</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="1.1. Tallet 0 og negative tal" href="11tallene.html" />
+    <link rel="prev" title="Indledning" href="indledning.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   1. Tal og algebra
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tal-og-algebra">
+<h1><span class="section-number">1. </span>Tal og algebra<a class="headerlink" href="#tal-og-algebra" title="Permalink til denne overskrift">¶</a></h1>
+<p>Det kan virke underligt at skulle lære om tal i gymnasiet, når man har brugt mindst ni år i folkeskolen på at lære at håndtere tal. Men det betyder jo ikke, at du rent faktisk har lært den bagvedliggende talteori, der ligger til grund for de talsystemer, som vi bruger i dag.</p>
+<p>Talteori er teorien om tal og vi kommer ganske kort til at snuse til, hvad den del af matematikken går ud på her. Vi skal f.eks. lære forskellen på tallet 3,14 og <span class="math notranslate nohighlight">\(\pi\)</span>, men også hvorfor det er vigtigt, at vi har et tal, som repræsenterer størrelsen ”ingen ting”.</p>
+<p>Senere i Kapitel 2 kigger vi mere på den mængdeteoretiske inddeling af forskellige tal. Det, vi vil se, er, at tal kan have samme egenskaber, og derfor giver det mening at samle disse i mængder.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="indledning.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title">Indledning</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="11tallene.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">1.1. </span>Tallet 0 og negative tal</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

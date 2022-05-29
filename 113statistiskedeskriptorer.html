@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.3. Statistiske deskriptorer</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="11.4. Deskriptive plots" href="114deskriptiveplots.html" />
+    <link rel="prev" title="11.2. Ugrupperede og grupperede observationer" href="112grupperet.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ugrupperet-observationer">
+   11.3.1. Ugrupperet observationer
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mindste-og-storstevaerdi">
+     11.3.1.1. Mindste- og størsteværdi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variationsbredde">
+     11.3.1.2. Variationsbredde
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gennemsnit">
+     11.3.1.3. Gennemsnit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typetal">
+     11.3.1.4. Typetal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#median">
+     11.3.1.5. Median
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kvartiler-og-fraktiler">
+     11.3.1.6. Kvartiler og fraktiler
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kvartilafstand">
+     11.3.1.7. Kvartilafstand
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stikprovevarians-og-spredning">
+     11.3.1.8. Stikprøvevarians og spredning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupperet-observationer">
+   11.3.2. Grupperet observationer
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     11.3.2.1. Gennemsnit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   11.3.3. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="statistiske-deskriptorer">
+<span id="statistiskedeskriptorer"></span><h1><span class="section-number">11.3. </span>Statistiske deskriptorer<a class="headerlink" href="#statistiske-deskriptorer" title="Permalink til denne overskrift">¶</a></h1>
+<p>I deskriptiv statistik benytter vi os af deskriptorer til at sige noget om vores datasæt. Deskriptorerne er nogle mål, der samler vores observationer og giver os et enkelt tal, der kan hjælpe os med at sige noget om vores data. Vi vil i dette kapitel introducere de forskellige deskriptorer.</p>
+<p>Vi deler vores statistiske deskriptorer op i to grupper, nemlig <em>positionsmål</em> og <em>spredningsmål</em>. Vi har følgende positionsmål:</p>
+<ul class="simple">
+<li><p>Største- og mindsteværdi</p></li>
+<li><p>Gennemsnit</p></li>
+<li><p>Typetal</p></li>
+<li><p>Kvartiler</p></li>
+<li><p>Fraktiler</p></li>
+</ul>
+<p>Positionsmålene fortæller noget om, hvor store observationerne er i vores datasæt.</p>
+<p>Vi har følgende spredningsmål:</p>
+<ul class="simple">
+<li><p>Variationsbredde</p></li>
+<li><p>Kvartilafstand</p></li>
+<li><p>Stikprøvevarians</p></li>
+<li><p>Spredning</p></li>
+</ul>
+<p>Spredningsmålene fortæller noget om, hvor spredte observationerne er fra hinanden i vores datasæt.</p>
+<div class="section" id="ugrupperet-observationer">
+<h2><span class="section-number">11.3.1. </span>Ugrupperet observationer<a class="headerlink" href="#ugrupperet-observationer" title="Permalink til denne overskrift">¶</a></h2>
+<div class="section" id="mindste-og-storstevaerdi">
+<h3><span class="section-number">11.3.1.1. </span>Mindste- og størsteværdi<a class="headerlink" href="#mindste-og-storstevaerdi" title="Permalink til denne overskrift">¶</a></h3>
+<p>Mindste- og størsteværdien er statistiske deskriptorer, der som navnet indikerer, fortæller hvad datasættets mindste og største observation er. Disse deskriptorer giver en idé om det spænd vores observationer befinder sig i og afstanden mellem disse kalder vi for <em>variationsbredden</em>.</p>
+<p>Vi kan ved hjælp af <span class="math notranslate nohighlight">\(\min\)</span>- og <span class="math notranslate nohighlight">\(\max\)</span>-funktionerne finde den mindste og største værdi blandt observationerne. Funktionen <span class="math notranslate nohighlight">\(\min\)</span> giver den mindste værdi, der inputtes i funktionen og <span class="math notranslate nohighlight">\(\max\)</span> giver den største værdi, der inputtes i funktionen.</p>
+<p>Givet er stikprøven</p>
+<div class="math notranslate nohighlight">
+\[    x_1,x_2,...,x_n.\]</div>
+<p>Heriblandt findes den observation, der har den mindste værdi, og den observation, der har den største værdi. Oftest kan vi ret hurtigt afgøre ud fra et lille datasæt, hvad den mindste og største værdi er. Men, matematisk er disse defineret ved:</p>
+<p>Mindsteværdien er givet ved:</p>
+<div class="math notranslate nohighlight" id="a60">
+<span id="equation-a60"></span><span class="eqno">(11.1)<a class="headerlink" href="#a60" title="Permalink til denne ligning">¶</a></span>\[x_{\text{min}} = \min\{x_1,x_2,...,x_n\} = \min_{i=1,2,...,n}\{x_i\} 
+    \]</div>
+<p>Størsteværdien er givet ved:</p>
+<div class="math notranslate nohighlight" id="equation-a61">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-a61" title="Permalink til denne ligning">¶</a></span>\[    x_{\text{max}} = \max\{x_1,x_2,...,x_n\} = \max_{i=1,2,...,n}\{x_i\} 
+    
+\]</div>
+</div>
+<div class="section" id="variationsbredde">
+<h3><span class="section-number">11.3.1.2. </span>Variationsbredde<a class="headerlink" href="#variationsbredde" title="Permalink til denne overskrift">¶</a></h3>
+<p>Variationsbredden er den statistiske deskriptor, der beskriver afstanden mellem datasættets mindste- og størsteværdi. Vi benævner variationsbredden med <span class="math notranslate nohighlight">\(R\)</span> for det engelske <em>range</em>:</p>
+<div class="math notranslate nohighlight">
+\[    R = x_{\text{max}} - x_{\text{min}} \tag{11.9}\label{a62}\]</div>
+<div class="proof eksempel admonition" id="karakterereksempel21">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.3 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Du får lige karaktererne igen:</p>
+<div class="math notranslate nohighlight">
+\[    4, 4, 10, 02, 12, 12, 7, 7, 7, 12, 4, 10, 7, 7, 02, 7, 10, 10, 7, 7\]</div>
+<p>Ved blot at aflæse datasættet kan vi se, at mindsteværdien er <span class="math notranslate nohighlight">\(x_{\text{min}} = 2\)</span> og størsteværdien er <span class="math notranslate nohighlight">\(x_{\text{max}} = 12\)</span>. Bemærk, at vi skriver <span class="math notranslate nohighlight">\(2\)</span> for karakteren <span class="math notranslate nohighlight">\(02\)</span>. Men for at vise brugen af <a class="reference internal" href="#equation-a60">()</a> og <a class="reference internal" href="#equation-a61">(11.2)</a>, så kan vi indsætte de distinkte værdier fra vores datasæt:</p>
+<div class="math notranslate nohighlight">
+\[    x_{\text{min}} = \min\{2,4,7,10,12\} = 2\]</div>
+<div class="math notranslate nohighlight">
+\[    x_{\text{max}} = \max\{2,4,7,10,12\} = 12\]</div>
+<p>Derfor bliver variationsbredden:</p>
+<div class="math notranslate nohighlight">
+\[    R = 12 - 2 = 10\]</div>
+<p>De laveste og højeste karakterer afviger med <span class="math notranslate nohighlight">\(10\)</span> fra hinanden.</p>
+</div>
+</div><p>Du kan bruge variationsbredden til at sige, hvad dine observationer højst afviger fra hinanden med og i hvilket interval de befinder sig i. For alle observationerne <span class="math notranslate nohighlight">\(x_1,x_2,...,x_n\)</span> gælder:</p>
+<div class="math notranslate nohighlight">
+\[    x_{\text{min}} \leq x_i \leq x_{\text{max}},\qquad i=1,2,...,n\]</div>
+<p>Det er det eneste variationsbredden fortæller. Det siger ikke så meget om dine andre observationer. For det kan være, at din mindste- og størsteværdi er to ekstreme observationer, der egentlig »ligger ret langt væk« fra resten af observationerne.</p>
+<p>Så, for at introducere nogle spredningsmål, der også tager højde for observationerne i mellem ydrepunkterne, har vi brug for <em>gennemsnittet</em>.</p>
+</div>
+<div class="section" id="gennemsnit">
+<h3><span class="section-number">11.3.1.3. </span>Gennemsnit<a class="headerlink" href="#gennemsnit" title="Permalink til denne overskrift">¶</a></h3>
+<p>Den statistiske deskriptor, som de fleste nok kender, er <em>gennemsnittet</em>. Den kaldes også for <em>middelværdi</em> eller <em>middeltal</em>. Det skyldes, at gennemsnittet er en nem størrelse at beregne og fortolke på. Gennemsnittet er et tal, der beskriver den centrale tendens for datasættet og fortæller noget om observationernes vægtet forekomst. Observationer der forekommer flere gange vil derfor trække gennemsnittet i retning af de observationers værdier.</p>
+<p>Vi betragter stikprøven</p>
+<div class="math notranslate nohighlight">
+\[    x_1,x_2,...,x_n.\]</div>
+<p>Vi beregner gennemsnittet ved:</p>
+<div class="math notranslate nohighlight">
+\[    \bar{x} = \frac{x_1 + x_2 + \cdots + x_n}{n} = \frac{1}{n} \sum_{i=1}^{n} x_i \tag{11.10}\label{a6}\]</div>
+<p><span class="math notranslate nohighlight">\(\bar{x}\)</span> er altså symbolet for stikprøvens gennemsnit.</p>
+<div class="proof eksempel admonition" id="karakterereksempel3">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.4 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os beregne gennemsnittet. Bemærk igen, at vi skriver <span class="math notranslate nohighlight">\(2\)</span> for karakteren <span class="math notranslate nohighlight">\(02\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+ \begin{align*}
+    \bar{x} &amp;= \frac{4+4+10+2+12+12+7+7+7+12+4+10+7+7+2+7+10+10+7+7}{20} \\
+        &amp;= \frac{148}{20} \\
+        &amp;= 7{,}4
+ \end{align*}
+ \end{split}\]</div>
+<p>Vi har altså, at eleverne i gennemsnit har fået ca. <span class="math notranslate nohighlight">\(7\)</span>.</p>
+</div>
+</div><p>Når vi betragter et datasæt som <span class="math notranslate nohighlight">\(x_1,x_2,...,x_n\)</span>, så er der jo, som sagt, ikke noget, der forhindrer nogle af observationerne i at være ens. Vi kan derfor også bruge hyppigheden eller frekvensen af observationerne i datasættet til at udregne gennemsnittet:</p>
+<div class="math notranslate nohighlight">
+\[    \bar{x} = \frac{h_1 x_1 + h_2 x_2 + \cdots + h_n x_n}{n} = \frac{1}{n}\sum_{i=1}^{n} h_i x_i \tag{11.11}\label{a7}\]</div>
+<p>Eller:</p>
+<div class="math notranslate nohighlight">
+\[    \bar{x} = f_1 x_1 + f_2 x_2 + \cdots + f_n x_n = \sum_{i=1}^{n} f_i x_i \tag{11.12}\label{a8}\]</div>
+<div class="exercise dropdown admonition" id="113statistiskedeskriptorer-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 11.4 </span></p>
+<div class="section" id="exercise-content">
+<p>Vis, at gennemsnittet beregnet ved hjælp af hyppigheden og gennemsnittet beregnet ved hjælp af frekvensen er identiske. Dvs. vis</p>
+<div class="math notranslate nohighlight">
+\[    \bar{x} = \frac{1}{n}\sum_{i=1}^{n} h_i x_i = \sum_{i=1}^{n} f_i x_i.\]</div>
+<details>
+<summary>Hint</summary>
+<p>
+<p>Gå tilbage til <span class="math notranslate nohighlight">\(\eqref{a7}\)</span> og betragt udtrykket</p>
+<div class="math notranslate nohighlight">
+\[    \frac{h_1 x_1 + h_2 x_2 + \cdots + h_n x_n}{n}.\]</div>
+<p>Hvordan var det, at frekvens er defineret?</p>
+</p>
+</details>
+</div>
+</div>
+<div class="proof eksempel admonition" id="karakterereksempel4">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.5 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Vi fortsætter fra <a class="reference internal" href="#karakterereksempel3">Eksempel 11.4</a> og bruger de nye måder at regne gennemsnit på. For at bruge <span class="math notranslate nohighlight">\(\eqref{a7}\)</span> og <span class="math notranslate nohighlight">\(\eqref{a8}\)</span>, så er det en god idé at have opstillet en hyppighedstabel over datasættet. Det har vi fra <a class="reference internal" href="111grundlaeggendebegreber.html#karakterereksempel">Eksempel 11.1</a>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Observation <span class="math notranslate nohighlight">\((x_i)\)</span></p></th>
+<th class="head"><p>Hyppighed <span class="math notranslate nohighlight">\((h_i)\)</span></p></th>
+<th class="head"><p>Frekvens <span class="math notranslate nohighlight">\((f_i)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(02\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{2}{20} = 0{,}1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{3}{20} = 0{,}15\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{8}{20} = 0{,}4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4}{20} = 0{,}2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(12\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{3}{20} = 0{,}15\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>I alt</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(20\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Vi får:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \bar{x} &amp;= \frac{2\cdot 2 + 3 \cdot 4 + 8 \cdot 7 + 4 \cdot 10 + 3 \cdot 12}{20} \\
+        &amp;= \frac{148}{20} \\
+        &amp;= 7{,}4
+\end{align*}
+\end{split}\]</div>
+<p>Eller</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \bar{x} &amp;= 0{,}1\cdot 2 + 0{,}15 \cdot 4 + 0{,}4 \cdot 7 + 0{,}2 \cdot 10 + 0{,}15 \cdot 12 \\
+        &amp;= 7{,}4
+\end{align*}
+\end{split}\]</div>
+<p>Dette kaldes også et <em>vejet gennemsnit</em> af det reduceret datasæt med de distinkte observationer <span class="math notranslate nohighlight">\(02,4,7,10,12\)</span>. Det kaldes vejet gennemsnit, da vi vægter observationen <span class="math notranslate nohighlight">\(02\)</span> med 10 %, <span class="math notranslate nohighlight">\(4\)</span> med 15 %, <span class="math notranslate nohighlight">\(7\)</span> med 40 % osv.</p>
+<p>Alle tre måder giver samme resultat, hvilket var det, som vi også regnede med.</p>
+</div>
+</div><p><strong>Bemærk:</strong> Vi har med vilje gennem dette afsnit holdt os til navnet <em>gennemsnit</em>. Det skyldes, at vi i senere kapitler vil møde navnet <em>middelværdi</em> i en anden sammenhæng.</p>
+</div>
+<div class="section" id="typetal">
+<h3><span class="section-number">11.3.1.4. </span>Typetal<a class="headerlink" href="#typetal" title="Permalink til denne overskrift">¶</a></h3>
+<p>Typetallet er den statistiske deskriptor, der fortæller hvilken observation, der optræder flest gange i vores datasæt. På engelsk kaldes typetallet for <em>mode</em>.</p>
+<p>Vi kan også for denne deskriptor opstille en funktion over datasættet. Vi kan bruge <span class="math notranslate nohighlight">\(\arg\,\max\)</span>-funktionen:</p>
+<div class="math notranslate nohighlight">
+\[    x_{\text{mode}} = \underset{i=1,2,...,n}{\arg\,\max} \{x_i\mid h(x_i)\} \tag{11.13}\label{11.13}\]</div>
+<p>Den minder om <span class="math notranslate nohighlight">\(\max\)</span>-funktionen, som vi brugte for størsteværdi-deskriptoren. Husk, at <span class="math notranslate nohighlight">\(h_i = h(x_i)\)</span> er hyppigheden for den <span class="math notranslate nohighlight">\(i\)</span>’te observation. Funktionen går ind og kigger på, hvornår er hyppigheden af observationerne størst og i stedet for at give os den største værdi, som <span class="math notranslate nohighlight">\(\max{h_i}\)</span> ville gøre, så går <span class="math notranslate nohighlight">\(\arg\)</span>-funktionen ind og finder den observation med størst hyppighed. Derfor har vi den lodrette streg, der adskiller <span class="math notranslate nohighlight">\(x_i\)</span> og <span class="math notranslate nohighlight">\(h(x_i)\)</span>. Vi fortæller hvilket argument, <span class="math notranslate nohighlight">\(x_i\)</span>, der skal kigges på og hvilken funktion, der maksimeres over. Ergo, så returnerer <span class="math notranslate nohighlight">\(\arg\,\max\)</span>-funktionen altså observationen med den største hyppighed - eller de observationer med den største hyppigheder.</p>
+<div class="proof eksempel admonition" id="karakterereksempel5">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.6 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Fra <a class="reference internal" href="111grundlaeggendebegreber.html#karakterereksempel">Eksempel 11.1</a> har vi hyppighedstabellen, som du kan genfinde ovenfor. Vi kan direkte se, at <span class="math notranslate nohighlight">\(x_{\text{mode}} = 7\)</span>, da hyppigheden for observationen <span class="math notranslate nohighlight">\(7\)</span> er <span class="math notranslate nohighlight">\(8\)</span>, <span class="math notranslate nohighlight">\(h(7)=8\)</span>, og større end de andre.</p>
+<div class="math notranslate nohighlight">
+\[ 
+    
+    x_{\text{mode}} = {\arg\,\max} \{2, 4, 7, 10, 12 \mid h(2), h(4), h(7), h(10), h(12)\} = 7\]</div>
+</div>
+</div></div>
+<div class="section" id="median">
+<h3><span class="section-number">11.3.1.5. </span>Median<a class="headerlink" href="#median" title="Permalink til denne overskrift">¶</a></h3>
+<p>I folkeskolen lærte du sikkert i statistik, at medianen er den statistiske deskriptor, der giver den midterste observation i det ordnede datasæt. Så, hvis vi har et datasæt med ni observationer <span class="math notranslate nohighlight">\(x_1,x_2,...,x_9\)</span>, så kan vi ordne observationerne:</p>
+<div class="math notranslate nohighlight">
+\[    x_{(1)}\leq x_{(2)}\leq \cdots \leq x_{(9)}\]</div>
+<p>Her er <span class="math notranslate nohighlight">\(x_{(i)}\)</span> de ordnede observationer. Et hurtigt eksempel på, hvordan denne opstilling skal forstås: Forstil dig, at vi har et datasæt med observationerne:</p>
+<div class="math notranslate nohighlight">
+\[    9, 1, 2, 1, 3, 5, 11, 4, 4 \]</div>
+<p>Altså, er vores rå datasæt <span class="math notranslate nohighlight">\(x_1 = 9\)</span>, <span class="math notranslate nohighlight">\(x_2 = 1\)</span>, <span class="math notranslate nohighlight">\(x_3 = 2\)</span> osv. hele vejen op til <span class="math notranslate nohighlight">\(x_9 = 4\)</span>. Det ordnede datasæt vil være:</p>
+<div class="math notranslate nohighlight">
+\[    1, 1, 2, 3, 4, 4, 4, 9, 11\]</div>
+<p>Nu er vores ordnede datasæt <span class="math notranslate nohighlight">\(x_{(1)} = 1\)</span>, <span class="math notranslate nohighlight">\(x_{(2)} = 1\)</span>, <span class="math notranslate nohighlight">\(x_{(3)} = 2\)</span> osv. hele vejen op til <span class="math notranslate nohighlight">\(x_{(9)} = 11\)</span>. Den midterste observation i det ordnede datasæt er <span class="math notranslate nohighlight">\(4\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    1, 1, 2, 3, \underset{\uparrow}{4}, 4, 4, 9, 11\]</div>
+<p>Denne definition af medianen giver ikke mening for et lige antal observationer, da vi potentielt kan have to forskellige midterste værdier. I det tilfælde tager vi gennemsnittet af de to som medianen. Det betyder, at vores median kan potentielt være en værdi, som ikke er en af observationerne. Lad os gå tilbage til vores lille eksempel fra før. Introducér et <span class="math notranslate nohighlight">\(1\)</span>-tal til observationerne, så vores datasæt nu er:</p>
+<div class="math notranslate nohighlight">
+\[    9, 1, 2, 1, 3, 5, 11, 4, 4, 1\]</div>
+<p>Og det ordnede med de to midterste observationer:</p>
+<div class="math notranslate nohighlight">
+\[    1, 1, 1, 2, \underset{\uparrow}{3}, \underset{\uparrow}{4}, 4, 4, 9, 11\]</div>
+<p>Gennemsnittet af <span class="math notranslate nohighlight">\(3\)</span> og <span class="math notranslate nohighlight">\(4\)</span> er <span class="math notranslate nohighlight">\(3{,}5\)</span>, hvilket tydeligvis ikke er et element i vores datasæt.</p>
+<p>Vi vil definere medianen på en lidt anden måde. Vi lader medianen være den første observation, der har en kumuleret frekvens større end eller lig med 0,5. Det er ækvivalent med, at vælge den midterste observation i et ordnet datasæt. Formelt kan vi også opstille en funktion for medianen for et datasæt <span class="math notranslate nohighlight">\(x_1,x_2,...,x_n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    x_{\text{median}} = \underset{i=1,2,...,n}{\arg\,\sup} \{x_i \mid F_i \geq 0{,}5\} \tag{11.14}\label{11.14}\]</div>
+<p><span class="math notranslate nohighlight">\(\sup\)</span>-funktionen kaldes <em>supremum</em> og vælger blot den mindste øvre grænse af det, som vi kigger på. Igen bruger vi <span class="math notranslate nohighlight">\(\arg\)</span>-funktionen til at få den observation ud, der opfylder, at det er den første observation, der har en kumuleret frekvens større end eller lig 0,5.</p>
+<p>Du kommer ikke umiddelbart til at skulle bruge de formelle udtryk for hverken <span class="math notranslate nohighlight">\(x_{\text{mode}}\)</span> eller <span class="math notranslate nohighlight">\(x_{\text{median}}\)</span>. Det er for at vise dig, at der faktisk findes forskrifter for disse størrelser i datasættet. Det nemmeste er selvfølgelig at opstille en hyppighedstabel med kumuleret frekvens for at kunne finde disse størrelser meget nemt.</p>
+<div class="proof eksempel admonition" id="karakterereksempel6">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.7 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Betragt nu den udvidede hyppighedstabel fra <a class="reference internal" href="111grundlaeggendebegreber.html#karakterereksempel2">Eksempel 11.2</a>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Observation <span class="math notranslate nohighlight">\((x_i)\)</span></p></th>
+<th class="head"><p>Hyppighed <span class="math notranslate nohighlight">\((h_i)\)</span></p></th>
+<th class="head"><p>Frekvens <span class="math notranslate nohighlight">\((f_i)\)</span></p></th>
+<th class="head"><p>Kumuleret frekvens <span class="math notranslate nohighlight">\((F_i)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(02\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{2}{20} = 0{,}1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0{,}1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4}{20} = 0{,}2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0{,}1 + 0{,}15 = 0{,}25\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{7}{20} = 0{,}35\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0{,}25 + 0{,}4 = 0{,}65\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4}{20} = 0{,}2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0{,}65 + 0{,}2 = 0{,}85\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(12\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{3}{20} = 0{,}15\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0{,}85 + 0{,}15 = 1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>I alt</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(20\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Her kan vi se, at observationen <span class="math notranslate nohighlight">\(7\)</span> må være medianen, da det er den første observation, der har en kumuleret frekvens større end eller lig 0,5.</p>
+<div class="math notranslate nohighlight">
+\[    x_{\text{median}} = 7\]</div>
+</div>
+</div></div>
+<div class="section" id="kvartiler-og-fraktiler">
+<h3><span class="section-number">11.3.1.6. </span>Kvartiler og fraktiler<a class="headerlink" href="#kvartiler-og-fraktiler" title="Permalink til denne overskrift">¶</a></h3>
+<p>Vi arbejder med tre kvartiler:</p>
+<ul class="simple">
+<li><p><em>1. kvartil</em> eller <em>nedre kvartil</em></p></li>
+<li><p><em>2. kvartil</em> eller <em>median</em></p></li>
+<li><p><em>3. kvartil</em> eller <em>øvre kvartil</em></p></li>
+</ul>
+<p>Har vi et datasæt og ordner det, så kan vi ved at splitte det op i »fire lige store dele« finde de tre kvartiler. Men for at holde os til vores definition af medianen, så vil vi også definere de andre kvartiler på tilsvarende vis.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/kvartil.png"><img alt="_images/kvartil.png" src="_images/kvartil.png" style="width: 448.0px; height: 125.5px;" /></a>
+</div>
+<p>Den nedre kvartil er den observation, der splitter datasættet i de 25 % mindste observationer og 75 % rest. Derfor er 1. kvartilen den første observation, der har en kumuleret frekvens større end eller lig med 0,25. Det kan vi skrive på samme måde som <span class="math notranslate nohighlight">\(\eqref{11.14}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    Q_1 = \underset{i=1,2,...,n}{\arg\,\sup} \{x_i \mid F_i \geq 0{,}25\} \tag{11.15}\label{11.15}\]</div>
+<p>Medianen har vi defineret i sidste afsnit. Vi skriver, at 2. kvartilen <span class="math notranslate nohighlight">\(Q_2 = x_{\text{median}}\)</span>.</p>
+<p>Den øvre kvartil er den observation, der splitter datasættet i de 75 % mindste observationer og 25 % rest eller ækvivalent; 25 % største observationer og 75 % rest. Derfor er 3. kvartilen den første observation, der har en kumuleret frekvens større end eller lig med 0,75. Det kan vi også skrive på samme måde som <span class="math notranslate nohighlight">\(\eqref{11.14}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    Q_3 = \underset{i=1,2,...,n}{\arg\,\sup} \{x_i \mid F_i \geq 0{,}75\} \tag{11.16}\label{11.16}\]</div>
+<p>Tekstforklaringen af kvartilerne giver sikkert mere mening end de formelle definitioner. Det er også fint, for igen kan vi blot bruge vores hyppighedstabel med kumuleret frekvens.</p>
+<div class="proof eksempel admonition" id="karakterereksempel7">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.8 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Betragt igen den udvidede hyppighedstabel fra <a class="reference internal" href="111grundlaeggendebegreber.html#karakterereksempel2">Eksempel 11.2</a>, som du også kan finde ovenfor. Vi ser, at <span class="math notranslate nohighlight">\(Q_1 = 4\)</span>, da det er den første observation, der har kumuleret frekvens større end eller lig med 0,25. Vi ved, at <span class="math notranslate nohighlight">\(Q_2 = 7\)</span> fra <a class="reference internal" href="#karakterereksempel5">Eksempel 11.6</a>. Vi ser til sidst, at <span class="math notranslate nohighlight">\(Q_3 = 10\)</span>, da det er den første observation, der har kumuleret frekvens større end eller lig med 0,75.</p>
+<div class="math notranslate nohighlight">
+\[    Q_1 = 4 \qquad Q_2 = 7 \qquad Q_3 = 10\]</div>
+</div>
+</div><p>Kvartilerne er eksempler på <em>fraktiler</em>. Ovenfor definerede vi den øvre kvartil, <span class="math notranslate nohighlight">\(Q_1\)</span>, som værende den observation, der har en kumuleret frekvens større end eller lig med <span class="math notranslate nohighlight">\(0{,}25\)</span>. Vi kalder derfor den øvre kvartil for 25 %-fraktilen. Men, vi kunne jo også have kigget på en anden kumuleret frekvens. Generelt har vi for fraktilerne, at vi selv kan bestemme den ønsket kumuleret frekvens. 32 %-fraktilen er altså den observation, der adskiller datasættet i de 32 % mindste observationer fra de 68 % største observationer.</p>
+<p>Generelt siger vi, at <span class="math notranslate nohighlight">\(p\,\%\)</span>-fraktilen er observationen <span class="math notranslate nohighlight">\(x_{p\,\%}\)</span>, der adskiller de <span class="math notranslate nohighlight">\(p\,\%\)</span> mindste observationer fra de <span class="math notranslate nohighlight">\((100-p)\,\%\)</span> største observationer. Med vores lidt mere avanceret måde at skrive det på:</p>
+<div class="math notranslate nohighlight">
+\[    x_{p\,\%} = \underset{i=1,2,...,n}{\arg\,\sup} \{x_i \mid F_i \geq p\,\% \}\]</div>
+<p>For det meste vil det være kvartilerne, der er interessante og derfor vil vi ikke fokusere på de generelle fraktiler for nu.</p>
+</div>
+<div class="section" id="kvartilafstand">
+<h3><span class="section-number">11.3.1.7. </span>Kvartilafstand<a class="headerlink" href="#kvartilafstand" title="Permalink til denne overskrift">¶</a></h3>
+<p>Ligesom variationsbredden, så er kvartilafstanden også et spredningsmål og blot afstanden mellem den øvre og nedre kvartil. Vi benævner kvartilafstanden med <span class="math notranslate nohighlight">\(R_Q\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    R_Q = Q_3 - Q_1 \tag{11.17}\label{11.17}\]</div>
+<div class="exercise dropdown admonition" id="113statistiskedeskriptorer-exercise-7">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 11.5 </span></p>
+<div class="section" id="exercise-content">
+<p>Hvad har kvartilafstand og variationsbredden til fælles? Hvordan er de forskellige? Siger de det samme? Diskutér.</p>
+</div>
+</div>
+</div>
+<div class="section" id="stikprovevarians-og-spredning">
+<h3><span class="section-number">11.3.1.8. </span>Stikprøvevarians og spredning<a class="headerlink" href="#stikprovevarians-og-spredning" title="Permalink til denne overskrift">¶</a></h3>
+<p>De sidste to deskriptorer, som vi skal have styr på, er, stikprøvevarians og spredning. Eftersom spredning er defineret ud fra stikprøvevariansen, starter vi med denne deskriptor.</p>
+<p>Stikprøvevariansen er et meget anvendt spredningsmål, da det kigger på, hvor meget observationerne i gennemsnit afviger fra gennemsnittet. Faktisk er det den kvadratiske afstand fra gennemsnittet. Vi har stikprøven <span class="math notranslate nohighlight">\(x_1,x_2,...,x_n\)</span> og definerer:</p>
+<div class="math notranslate nohighlight">
+\[    s^2 = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \cdots + (x_n - \bar{x})^2}{n} = \frac{1}{n}\sum_{i=1}^{n} (x_i - \bar{x})^2 \tag{11.18}\label{11.18}\]</div>
+<p>Her kalder vi sum-elementet <span class="math notranslate nohighlight">\((x_i - \bar{x})^2\)</span> for den kvadratiske afstand for observation <span class="math notranslate nohighlight">\(x_i\)</span>. Vi kan også udtrykke stikprøvevariansen ved hjælp af frekvensen, ligesom vi gjorde for gennemsnittet:</p>
+<div class="math notranslate nohighlight">
+\[    s^2 = \sum_{i=1}^{n} f_i (x_i - \bar{x})^2 \tag{11.19}\label{11.19}\]</div>
+<div class="exercise dropdown admonition" id="113statistiskedeskriptorer-exercise-8">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 11.6 </span></p>
+<div class="section" id="exercise-content">
+<p>Vis, at du kan omskrive <span class="math notranslate nohighlight">\(\eqref{11.18}\)</span> til <span class="math notranslate nohighlight">\(\eqref{11.19}\)</span>.</p>
+</div>
+</div>
+<p>Måske, du har bemærket, at stikprøvevariansen er defineret »i anden«, <span class="math notranslate nohighlight">\(s^2\)</span>. Spredning derimod er blot kvadratroden af stikprøvevarisen, så vi blot får <span class="math notranslate nohighlight">\(s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    s = \sqrt{s^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - \bar{x})^2} \tag{11.20}\label{11.20}\]</div>
+<div class="exercise dropdown admonition" id="113statistiskedeskriptorer-exercise-9">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 11.7 </span></p>
+<div class="section" id="exercise-content">
+<p>Vis, at spredningen også kan skrives som:</p>
+<div class="math notranslate nohighlight">
+\[    s = \frac{1}{\sqrt{n}}\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2}\]</div>
+</div>
+</div>
+<p>Spredningen er derfor også et mål for, hvor meget observationerne i gennemsnit afviger fra gennemsnittet. I stikprøvevariansen kigger vi på den kvadratiske afstand mellem vores observation, <span class="math notranslate nohighlight">\(x_i\)</span>, og gennemsnittet, <span class="math notranslate nohighlight">\(\bar{x}\)</span>. Grunden til dette er, at så bliver afstandene positive, da <span class="math notranslate nohighlight">\(x^2\)</span> jo kun er en positiv funktion uanset, hvad <span class="math notranslate nohighlight">\(x\)</span> er. Derfor skal vi ikke tænke over, at vi kunne have negative elementer i vores sum. Når vi snakker om spredning, så er vi i princippet ligeglad med om det er til højre eller venstre for gennemsnittet. Idéen med spredningen er at transformere afstanden tilbage til »første potens«.</p>
+<div class="proof eksempel admonition" id="karakterereksempel8">
+<p class="admonition-title"><span class="caption-number">Eksempel 11.9 </span> (Karakterer - fortsat)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Vi beregner nu stikprøvevariansen og spredningen for datasættet. Vi bruger både <span class="math notranslate nohighlight">\(\eqref{11.17}\)</span> og <span class="math notranslate nohighlight">\(\eqref{11.18}\)</span> for at vise, at vi får samme resultat. Vi husker, at <span class="math notranslate nohighlight">\(\bar{x} = 7{,}4\)</span> fra <a class="reference internal" href="#karakterereksempel3">Eksempel 11.4</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    s^2 &amp;= \frac{1}{20} \big( (4 - 7{,}4)^2 + (4 - 7{,}4)^2 + (10 - 7{,}4)^2 + (2 - 7{,}4)^2 \\
+    &amp;\qquad\qquad + (12 - 7{,}4)^2 + (12 - 7{,}4)^2 + (7 - 7{,}4)^2 + (7 - 7{,}4)^2 \\
+    &amp;\qquad\qquad + (7 - 7{,}4)^2 + (12 - 7{,}4)^2 + (4 - 7{,}4)^2 + (10 - 7{,}4)^2 \\
+    &amp;\qquad\qquad + (7 - 7{,}4)^2 + (7 - 7{,}4)^2 + (2 - 7{,}4)^2 + (7 - 7{,}4)^2 \\
+    &amp;\qquad\qquad + (10 - 7{,}4)^2 + (10 - 7{,}4)^2 + (7 - 7{,}4)^2 + (7 - 7{,}4)^2 \big) \\
+    &amp;= 9{,}24
+\end{align*}
+\end{split}\]</div>
+<p>Eller:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    s^2 &amp;= 0{,}1 \cdot (2 - 7{,}4)^2 + 0{,}15 \cdot (4 - 7{,}4)^2 + 0{,}4 \cdot (7 - 7{,}4)^2 \\
+        &amp;\qquad + 0{,}2 \cdot (10 - 7{,}4)^2 + 0{,}15 \cdot (12 - 7{,}4)^2 \\
+        &amp;= 9{,}24
+\end{align*}
+\end{split}\]</div>
+<p>Stikprøvevariansen er altså <span class="math notranslate nohighlight">\(9{,}24\)</span>, eller gennemsnittet af den kvadratiske afstand mellem observationerne og gennemsnittet er <span class="math notranslate nohighlight">\(9{,}24\)</span>. Dermed bliver spredningen</p>
+<div class="math notranslate nohighlight">
+\[    s = \sqrt{s^2} = \sqrt{9{,}24} \approx 3{,}04.\]</div>
+</div>
+</div></div>
+</div>
+<div class="section" id="grupperet-observationer">
+<h2><span class="section-number">11.3.2. </span>Grupperet observationer<a class="headerlink" href="#grupperet-observationer" title="Permalink til denne overskrift">¶</a></h2>
+<div class="section" id="id1">
+<h3><span class="section-number">11.3.2.1. </span>Gennemsnit<a class="headerlink" href="#id1" title="Permalink til denne overskrift">¶</a></h3>
+</div>
+</div>
+<div class="section" id="opgaver">
+<h2><span class="section-number">11.3.3. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="112grupperet.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">11.2. </span>Ugrupperede og grupperede observationer</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="114deskriptiveplots.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">11.4. </span>Deskriptive plots</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

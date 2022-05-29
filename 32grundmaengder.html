@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.2. Grundmængder</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="3.3. En ligning med en ubekendt" href="33enligningenubekendt.html" />
+    <link rel="prev" title="3.1. Lighed, ligevægtsprincip og ækvivalens" href="31lighedogligevaegt.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   3.2.1. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="grundmaengder">
+<span id="id1"></span><h1><span class="section-number">3.2. </span>Grundmængder<a class="headerlink" href="#grundmaengder" title="Permalink til denne overskrift">¶</a></h1>
+<p>Noget nyt, som du sikkert ikke har været vant til at tænke over, er hvilke værdier for den ubekendte variable, for eksempel <span class="math notranslate nohighlight">\(x\)</span>, når vi arbejder med ligninger. De værdier, som vi må arbejde med, kalder vi ligningens <em>grundmængde</em> og betegnes <span class="math notranslate nohighlight">\(G\)</span>. Den skal bestemmes inden, at du går i kast med at løse ligningen.</p>
+<p>Forestil dig, at du ikke ved, hvordan du vil løse en ligning, men bare prøve at indsætte forskellige værdier for <span class="math notranslate nohighlight">\(x\)</span> ind i en ligning indtil, at du finder den rigtige værdi. Kigger vi så på ligningen</p>
+<div class="math notranslate nohighlight">
+\[    x-3=2x+9,\]</div>
+<p>så tager det ikke mange forsøg at finde frem til <span class="math notranslate nohighlight">\(x=-12\)</span>. Vi behøver heller ikke være forsigtig med hvilke værdier for <span class="math notranslate nohighlight">\(x\)</span>, som vi afprøver. Vi siger, at grundmængden er alle de reelle tal, som jo er alle tal, vi kan komme i tanke om. Vi skriver derfor</p>
+<div class="math notranslate nohighlight">
+\[    G=\mathbb{R}.\]</div>
+<p>Men har vi en ligning givet ved</p>
+<div class="math notranslate nohighlight">
+\[    \frac{8}{x} = 2, \]</div>
+<p>så tager det heller ikke mange forsøg at finde frem til <span class="math notranslate nohighlight">\(x=4\)</span>. Her skal vi dog være opmærksomme på, hvilke <span class="math notranslate nohighlight">\(x\)</span>’er vi afprøver! Vi kan nemlig se, at vi har <span class="math notranslate nohighlight">\(x\)</span> i nævneren på en brøk i udtrykket på venstresiden, hvilket betyder, at vi potentielt kunne komme til at dividere med 0 - og det må vi jo ikke! Derfor har vi i dette tilfælde faktisk én værdi for <span class="math notranslate nohighlight">\(x\)</span>, som vi ikke må prøve at indsætte, nemlig <span class="math notranslate nohighlight">\(x=0\)</span>. Grundmængden her skriver vi</p>
+<div class="math notranslate nohighlight">
+\[    G=\{x\in\mathbb{R}\mid x\neq 0 \},\]</div>
+<p>som blot betyder, at vi må prøve alle de reelle tal, bortset fra 0. Vi kan også skrive denne grundmængde som</p>
+<div class="math notranslate nohighlight">
+\[    G=\mathbb{R}\setminus \{0\}.\]</div>
+<p>Husk, når vi arbejder med mængdeoperationer, så virker de kun på mængder. Derfor bliver vi nødt til at pakke 0-tallet ind i en mængde <span class="math notranslate nohighlight">\(\{0\}\)</span> og trække denne mængde fra <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, så vi netop får en mængde bestående af alle reelle tal uden 0.</p>
+<p>Disse to indledende eksempler skulle gerne give dig en idé om, hvornår vi skal være opmærksomme, når vi arbejder med ligninger. Har vi for eksempel en ligning, der indeholder en brøk med <span class="math notranslate nohighlight">\(x\)</span> i nævneren, så skal vi bestemme grundmængden sådan, at vi ikke kan få 0 i nævneren.</p>
+<p>Vi er dog ikke helt færdige… Hvis vi har en ligning, hvor der indgår et udtryk med <span class="math notranslate nohighlight">\(x\)</span> under en lige rod, altså en rod med en lige rodeksponent, så skal vi huske, at radikanden ikke kan være negativ. For eksempel</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt{x} = 2\]</div>
+<p>løses let med <span class="math notranslate nohighlight">\(x=4\)</span>, men vi kan ikke prøve at indsætte <span class="math notranslate nohighlight">\(x=-2\)</span>, da <span class="math notranslate nohighlight">\(\sqrt{-2}\)</span> ikke findes. Derfor bliver grundmængden til denne ligning</p>
+<div class="math notranslate nohighlight">
+\[    G = \{x\in\mathbb{R}\mid x\geq 0\}\]</div>
+<p>og betyder blot, at de værdier for <span class="math notranslate nohighlight">\(x\)</span>, som vi må »lege med« skal være større end eller lig med 0.</p>
+<div class="proof eksempel admonition" id="eksempel-0">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.1 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os bestemme grundmængden for ligningen</p>
+<div class="math notranslate nohighlight">
+\[    \frac{2}{x-1} = 9.\]</div>
+<p>Vi ser, at vi har en ligning med en brøk i udtrykket på venstresiden, hvor <span class="math notranslate nohighlight">\(x\)</span> indgår i nævneren. Vi er derfor interesseret i hvilket <span class="math notranslate nohighlight">\(x\)</span>, der giver</p>
+<div class="math notranslate nohighlight">
+\[    x-1 = 0\]</div>
+<p>for vi må jo ikke have 0 i nævneren. Vi ser, at det sker for <span class="math notranslate nohighlight">\(x=1\)</span>, og derfor bliver ligningens grundmængde</p>
+<div class="math notranslate nohighlight">
+\[    G = \{x \in \mathbb{R} \mid x\neq 1\}\quad \text{eller}\quad G=\mathbb{R}\setminus\{1\}.\]</div>
+</div>
+</div><div class="proof eksempel admonition" id="eksempel-1">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.2 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os bestemme grundmængden for ligningen</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt{3-x} = 2.\]</div>
+<p>Vi ser, at vi har med en lige rod at gøre i udtrykket på venstresiden. Ergo skal</p>
+<div class="math notranslate nohighlight">
+\[    3-x\geq 0.\]</div>
+<p>Det kan vi se gælder for <span class="math notranslate nohighlight">\(x\leq 3\)</span> og derfor har vi, at grundmængden for denne ligning er givet ved</p>
+<div class="math notranslate nohighlight">
+\[    G=\{x\in\mathbb{R} \mid x\leq 3\}.\]</div>
+</div>
+</div><div class="proof eksempel admonition" id="eksempel-2">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.3 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os bestemme grundmængden for ligningen</p>
+<div class="math notranslate nohighlight">
+\[    \frac{2}{x-2} + \frac{3}{x+3} = 1.\]</div>
+<p>Vi ser her, at vi har to brøker med <span class="math notranslate nohighlight">\(x\)</span> i begge nævnere i udtrykket på venstresiden. Vi har derfor muligvis flere værdier for <span class="math notranslate nohighlight">\(x\)</span>, der kunne resultere i, at der kommer til at stå 0 i nævnerne.</p>
+<div class="math notranslate nohighlight">
+\[    x-2 = 0\]</div>
+<p>gælder for <span class="math notranslate nohighlight">\(x=2\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[    x+3 = 0\]</div>
+<p>gælder for <span class="math notranslate nohighlight">\(x=-3\)</span>, så grundmængden for ligningen bliver</p>
+<div class="math notranslate nohighlight">
+\[    G=\{x\in\mathbb{R} \mid x\neq -3 \vee x\neq 2\}\quad \text{eller}\quad G=\mathbb{R}\setminus\{-3,2\}.\]</div>
+<p>Her betyder <span class="math notranslate nohighlight">\(\vee\)</span> <em>logisk eller</em> eller <em>disjunktion</em>, men kan bruges som et matematisk symbol for »eller« på den måde, som vi har gjort her.</p>
+</div>
+</div><div class="section" id="opgaver">
+<h2><span class="section-number">3.2.1. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+<div class="proof opgave admonition" id="opgave-3">
+<p class="admonition-title"><span class="caption-number">Opgave 3.1 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængden for følgende udtryk:</p>
+<p>    a) <span class="math notranslate nohighlight">\(3x+4\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(2(x-1)+x\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\frac{1}{x+2}\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(\frac{3}{2x-7}\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-4">
+<p class="admonition-title"><span class="caption-number">Opgave 3.2 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængden for følgende udtryk:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\sqrt{x-6}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(\sqrt[3]{x+2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\frac{3}{\sqrt{x-8}}\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2x+5}}\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-5">
+<p class="admonition-title"><span class="caption-number">Opgave 3.3 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængden for følgende udtryk:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\frac{1}{x}+\frac{1}{x+1}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(\frac{2x}{3}+\frac{2}{2x+3}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\frac{1}{x}+\sqrt{x-2}\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{x+8}}+\frac{1}{4x-1}\)</span></p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="31lighedogligevaegt.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">3.1. </span>Lighed, ligevægtsprincip og ækvivalens</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="33enligningenubekendt.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>En ligning med en ubekendt</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

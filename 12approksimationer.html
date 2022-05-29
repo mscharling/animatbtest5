@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2. Approksimationer</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="1.3. Regnearterne" href="13regnearterne.html" />
+    <link rel="prev" title="1.1. Tallet 0 og negative tal" href="11tallene.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approksimationens-afvigelse">
+   1.2.1. Approksimationens afvigelse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hvilken-approksimation">
+   1.2.2. Hvilken approksimation?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   1.2.3. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="approksimationer">
+<h1><span class="section-number">1.2. </span>Approksimationer<a class="headerlink" href="#approksimationer" title="Permalink til denne overskrift">¶</a></h1>
+<p>Når vi arbejder med tal, så kan det nogle gange være meningsfuldt at bruge approksimationer. Approksimationer, eller tilnærmelser, danner vi, når vi runder tal op eller ned og alt efter, hvor meget vi afrunder jo grovere en approksimation får vi.</p>
+<p>Vi bruger ofte approksimationer, når vi laver overslagsregning på en indkøbstur i supermarkedet, så ikke vi bliver overraskede over, hvor meget vi handler for. Det er oftest nemmere at lægge runde tal sammen end kommatal. F.eks. hvis vi køber en sodavand til 19,99 kr. og to pakker tyggegummi til stykprisen 8,99 kr., så skal vi i alt af med</p>
+<div class="math notranslate nohighlight">
+\[
+    19{,}99\,\text{kr.}+2 \cdot 8{,}99\,\text{kr.} = 37{,}97\,\text{kr.}
+\]</div>
+<p>Det kunne vi have sjusset os frem til ved at lave en overslagsregning ved at runde 19,99 kr. op til 20 kr. og 8,99 kr. op til 9 kr. eller endda op til 10 kr. Så havde regnestykket været meget nemmere at regne i hovedet:</p>
+<div class="math notranslate nohighlight">
+\[
+    20\,\text{kr.} + 2 \cdot 10\,\text{kr.} = 40\,\text{kr.}
+\]</div>
+<p>Kigger vi på de to resultater, så kan vi også se, at 40 kr. er et godt bud på, hvor meget vi handler for. De 40 kr. er netop en approksimation for det samlede beløb. Fordi vi rundede 8,99 kr. op til 10 kr., så får vi selvfølgelig en grovere approksimation af det samlede resultat, end hvis vi havde rundet op til 9 kr.</p>
+<p>Vi bruger også approksimationer, når vi snakker om klokken, for selvom klokken nu er 11:32, så kan vi godt finde på at sige: ”Klokken er halv 12”.</p>
+<div class="proof eksempel admonition" id="eksempel-0">
+<p class="admonition-title"><span class="caption-number">Eksempel 1.4 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Tallet 3,14 og tallet <span class="math notranslate nohighlight">\(\pi\)</span> er af hver sin natur. Vi siger, at 3,14 er et rational tal, da det kan skrives som brøken</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{314}{100} \text{,}
+\]</div>
+<p>men tallet <span class="math notranslate nohighlight">\(\pi\)</span> kan ikke skrives som en brøk og derfor siger vi, at det er irrationalt. Netop disse egenskaber vender vi tilbage til i Kapitel 2.</p>
+<p>Vi ved dog, at <span class="math notranslate nohighlight">\(\pi\)</span> har de første fire decimaltal 3,1415…, og derfor lærer vi i folkeskolen at 3,14 er en fin nok approksimation af <span class="math notranslate nohighlight">\(\pi\)</span>. Vi runder af til to decimaler ved at betragte tredje decimal, 1-tallet, og eftersom det er under fem, så runder vi ikke anden decimal op. Så, approksimationen, som vi lærer i folkeskolen skrives</p>
+<div class="math notranslate nohighlight">
+\[
+    \pi \approx 3{,}14\text{.}
+\]</div>
+<p>Her betyder <span class="math notranslate nohighlight">\(\approx\)</span> <em>tilnærmelsesvis</em> eller <em>approksimativt</em>.</p>
+</div>
+</div><p>Faktisk bruger computerprogrammer og lommeregnere også en approksimation af <span class="math notranslate nohighlight">\(\pi\)</span>, når der ønskes at regne med dette tal. For eftersom <span class="math notranslate nohighlight">\(\pi\)</span> ikke kan skrives som en brøk, så har tallet en uendelig decimaludvidelse, hvor decimalerne ikke optræder i et mønster. Computere og lommeregnere bruger i dag så mange decimaler af <span class="math notranslate nohighlight">\(\pi\)</span>, at approksimationen er så tæt på det rigtige tal, at det ikke spiller en rolle, at det er approksimationen, der anvendes.</p>
+<div class="section" id="approksimationens-afvigelse">
+<h2><span class="section-number">1.2.1. </span>Approksimationens afvigelse<a class="headerlink" href="#approksimationens-afvigelse" title="Permalink til denne overskrift">¶</a></h2>
+<p>Bruger vi approksimationer, så kan det være en god idé at vide, hvor meget vores approksimation afviger fra det rigtige resultat. Her snakker vi om <em>den absolutte afvigelse</em> og <em>den relative afvigelse</em>.</p>
+<p>Den absolutte afvigelse angiver, hvor langt væk vores approksimation ligger fra vores rigtige tal på tallinjen. Kigger vi på eksemplet fra før med sodavanden og tyggegummipakkerne, så kan vi se, at vores overslagsregning gav resultatet 40 kr., men at det rigtige resultat var 37,97 kr., hvilket giver en absolut afvigelse på 2,03 kr.</p>
+<div class="math notranslate nohighlight">
+\[
+    40 \, \text{kr.} - 37{,}97 \, \text{kr.} = 2{,}03 \, \text{kr.}
+\]</div>
+<p>Den relative afvigelse angiver en procentuel afvigelse fra vores rigtige tal. Den bruger faktisk den absolutte afvigelse, men relaterer det til det rigtige resultat. Kigger vi igen på samme eksempel, så kan vi se, at overslagsregningen giver en relativ afvigelse på ca. 5,35 %.</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{40 \, \text{kr.} - 37{,}97 \, \text{kr.}}{37{,}97 \, \text{kr.}} = \frac{2{,}03 \, \text{kr.}}{37{,}97 \, \text{kr.}} = 0{,}05346326046 \approx 5{,}35 \, \%
+\]</div>
+<p>Havde vi ikke rundet stykprisen på tyggegummipakkerne op til 10 kr., men rundet op til 9 kr., så ville vi få en mindre grov approksimation, hvilket vi kan måle på afvigelserne.</p>
+<div class="math notranslate nohighlight">
+\[
+    38 \, \text{kr.} - 37,97 \, \text{kr.} = 0,03 \, \text{kr.}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \frac{38 \, \text{kr.} - 37{,}97 \, \text{kr.}}{37{,}97 \, \text{kr.}} = \frac{0{,}03 \, \text{kr.}}{37{,}97 \, \text{kr.}} = 0{,}00079009744 \approx 0{,}08 \, \%
+\]</div>
+</div>
+<div class="section" id="hvilken-approksimation">
+<h2><span class="section-number">1.2.2. </span>Hvilken approksimation?<a class="headerlink" href="#hvilken-approksimation" title="Permalink til denne overskrift">¶</a></h2>
+<p>Det er altid et godt spørgsmål at stille sig selv i situationer, hvor det kan være oplagt at bruge approksimationer, om hvilken approksimation man skal bruge. Regner vi f.eks. gangestykket</p>
+<div class="math notranslate nohighlight">
+\[
+    2{,}5 \cdot 5{,}25 = 12{,}8625\text{,}
+\]</div>
+<p>så kan vi se, at vi får fire decimaler, men en god huskeregel i opgaver, hvor der fås flere decimaler end i de angivne tal i opgaven, så kan man runde tallet af, så der er lige så mange decimaler i resultatet. Det betyder, at vi i gangestykket ovenfor kunne runde af til 12,86, eftersom de tal, som vi regner med, kun er angivet med to decimaler. Det er bare vigtigt, at man så skriver, at det er et tilnærmelsesvist rigtigt resultat. Enten kan man skrive: ”Det er ca. 12,86”, eller man kan angive det med symbolet, altså</p>
+<div class="math notranslate nohighlight">
+\[
+    2{,}45 \cdot 5{,}25 \approx 12{,}86\text{,}
+\]</div>
+<p>for på den måde viser du, at du godt ved, at dit resultat, som du har angivet, ikke er fuldstændigt korrekt, men at det er så tæt på, at det godt kan tillades som et svar på opgaven. Afvigelsen er jo relativ lav:</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{12{,}8625 - 12{,}86}{12{,}86} = \frac{0{,}0025}{12{,}8625} = 0{,}00019436345 \approx 0{,}02 \, \%.
+\]</div>
+</div>
+<div class="section" id="opgaver">
+<h2><span class="section-number">1.2.3. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+<div class="proof opgave admonition" id="opgave-1">
+<p class="admonition-title"><span class="caption-number">Opgave 1.4 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Find den absolutte og relative afvigelse på approksimationerne</p>
+<p>    a) <span class="math notranslate nohighlight">\(0{,}9 \approx 1\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(0{,}99 \approx 1\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(0{,}999 \approx 1\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(0{,}9999 \approx 1\)</span></p>
+<p>Hvad kan du konkludere ud fra resultaterne?</p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="11tallene.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">1.1. </span>Tallet 0 og negative tal</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="13regnearterne.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Regnearterne</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

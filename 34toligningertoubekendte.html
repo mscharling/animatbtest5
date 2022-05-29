@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.4. To ligninger med to ubekendte</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="3.5. Grafernes muligheder" href="35grafernesmuligheder.html" />
+    <link rel="prev" title="3.3. En ligning med en ubekendt" href="33enligningenubekendt.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indsaettelsesmetoden">
+   3.4.1. Indsættelsesmetoden
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lige-store-koefficienters-metode">
+   3.4.2. Lige store koefficienters metode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determinantmetoden">
+   3.4.3. Determinantmetoden
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gauss-elimination">
+   3.4.4. Gauss-elimination
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   3.4.5. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="to-ligninger-med-to-ubekendte">
+<h1><span class="section-number">3.4. </span>To ligninger med to ubekendte<a class="headerlink" href="#to-ligninger-med-to-ubekendte" title="Permalink til denne overskrift">¶</a></h1>
+<p>Du kan også komme ud for at skulle løse to ligninger med to ubekendte. Vi udvider nu vores sidste kapitel med en ny ligning og en ny variabel, som vi oftest vil kalde <span class="math notranslate nohighlight">\(y\)</span>. Et eksempel på to ligninger med to ubekendte kunne være:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:}  &amp;   &amp;2x + 7 = 3 - y \\
+&amp;\text{II:} &amp;   &amp;2y + x = 4
+\end{align*}
+\end{split}\]</div>
+<p>Vi kan godt lide at »navngive« vores to ligninger, så vi nemmere kan referere til, hvilken vi arbejder med. Det bliver især relevant, når vi skal introducere de metoder, som vi kan bruge for at løse flere ligninger med flere ubekendte.</p>
+<p>I dette kapitel vil vi kun beskæftige os med lineære ligningssystemer af to ligninger. Det betyder, at de to ligninger med to variable vil kun indeholde led af første grad. Altså, begge vores ligninger vil være af den simple form, som vi kiggede på i sidste kapitel.</p>
+<p>Generelt når vi arbejder med ligningssystemer, så vil vi gerne have, at der er lige mange ubekendte, som der er ligninger. Omvendt, så vil vi også gerne have, at der er ligeså mange ligninger, som der er ubekendte. I vores tilfælde med to ligninger med to ubekendte, så ville vi ikke kunne løse én ligning med to ubekendte.</p>
+<p>Vi vil i dette kapitel introducere metoderne:</p>
+<ul class="simple">
+<li><p>Indsættelsesmetoden (kaldes også substitutionsmetoden)</p></li>
+<li><p>Lige store koefficienters metode</p></li>
+<li><p>Determinantmetoden</p></li>
+<li><p>Gauss-elimination</p></li>
+</ul>
+<div class="section" id="indsaettelsesmetoden">
+<h2><span class="section-number">3.4.1. </span>Indsættelsesmetoden<a class="headerlink" href="#indsaettelsesmetoden" title="Permalink til denne overskrift">¶</a></h2>
+<p>Indsættelsesmetoden er en meget vigtig metode, som du bør øve så meget, at den kommer til at ligge på rygraden. Idéen med metoden er, at isolere for en af de ubekendte i den ene ligning og så indsætte det udtryk i den anden ligning.</p>
+<p>Lad os kigge på et eksempel:</p>
+<div class="proof eksempel admonition" id="eksempel-0">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.11 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Vi skal isolere <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> i ligningerne:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; x+2y &amp;= 4 \\
+&amp;\text{II:} &amp; 2x-3y &amp;= 15
+\end{align*}
+\end{split}\]</div>
+</div>
+</div></div>
+<div class="section" id="lige-store-koefficienters-metode">
+<h2><span class="section-number">3.4.2. </span>Lige store koefficienters metode<a class="headerlink" href="#lige-store-koefficienters-metode" title="Permalink til denne overskrift">¶</a></h2>
+<p>Lige store koefficienters metode går ud på, som navnet indikerer, at få koefficienterne for en af de to ubekendte i de to ligninger til at blive lige store, og så på den måde sætte ligningerne lig hinanden.</p>
+</div>
+<div class="section" id="determinantmetoden">
+<h2><span class="section-number">3.4.3. </span>Determinantmetoden<a class="headerlink" href="#determinantmetoden" title="Permalink til denne overskrift">¶</a></h2>
+<p>Determinantmetoden er en lidt mere kompliceret udgave af lige store koefficienters metode. Her stiller vi ligningerne op i en bestemt orden og rækkefølge.</p>
+</div>
+<div class="section" id="gauss-elimination">
+<h2><span class="section-number">3.4.4. </span>Gauss-elimination<a class="headerlink" href="#gauss-elimination" title="Permalink til denne overskrift">¶</a></h2>
+<p>En helt fjerde metode, der især anvendes inden for lineær algebra, er Gauss-eliminations algoritmen. Den er især anvendelig for større ligningssystemer. Forestil dig at skulle bruge substitutionsmetoden for fem ligninger med fem ubekendte - det ville blive ret så uoverskueligt!</p>
+<p>Den overordnede idé med denne metode er, at man kan samle koefficienterne for de forskellige variable i en matrix og reducere den til det, der kaldes en reduceret trappeform og direkte aflæse ligningssystemets løsning. Det gøres ved at bruge ligningerne på hinanden ved at trække dem fra hinanden, lægge dem til hinanden eller gange et tal på ligningen. Vi vil ikke gå matematikken i dybden, men blot blive bekendt med metoden.</p>
+<div class="sphinx-bs container-fluid docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 docutils">
+<div class="card w-100 shadow-none border-0 bg-primary docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="matrix">
+<a class="reference internal image-reference" href="_images/matrix.png"><img alt="_images/matrix.png" src="_images/matrix.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">figur 3.1 </span><span class="caption-text">En matrix. <br />
+I stedet for alle <span class="math notranslate nohighlight">\(a\)</span>’erne, så kan du forestille dig, at der står tal.</span><a class="headerlink" href="#matrix" title="Permahenvisning til dette billede">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 docutils">
+<div class="card w-100 shadow-none border-0 bg-primary docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="reducedmatrix">
+<a class="reference internal image-reference" href="_images/reducedmatrix.png"><img alt="_images/reducedmatrix.png" src="_images/reducedmatrix.png" style="width: 85%;" /></a>
+<p class="caption"><span class="caption-number">figur 3.2 </span><span class="caption-text">En reduceret trappe-matrix. <br />
+En sådan matrix har 0’erne i den øvre højre del og nedre venstre del. Der er kun tal i diagonalen.</span><a class="headerlink" href="#reducedmatrix" title="Permahenvisning til dette billede">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Billederne ovenfor viser matricer med tre rækker og tre kolonner. Det kalder vi en <span class="math notranslate nohighlight">\(3\times 3\)</span>-matrix. Du kommer kun til at arbejde med <span class="math notranslate nohighlight">\(2\times 2\)</span>-matricer, da vi kun i dette kapitel kigger på to ligniner med to ubekendte.</p>
+<p>Ligesom, da vi introducere operationerne i <a class="reference internal" href="31lighedogligevaegt.html#lighedogligevaegt"><span class="std std-ref">Kapitel 3.1</span></a>, vil vi i dette afsnit indføre og bruge følgende elementære operationer:</p>
+<ul class="simple">
+<li><p>Du må bytte rundt på to ligninger.</p></li>
+<li><p>Du må gange alle led i en ligning med et tal, der er forskelligt fra nul.</p></li>
+<li><p>Du må addere et multiplum af en ligning til en anden eller trække det fra.</p></li>
+</ul>
+<p>Lad os introducere algoritmen med et eksempel:</p>
+<div class="proof eksempel admonition" id="eksempel-1">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.12 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Vi skal løse følgende ligninger:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; 3x+2y &amp;= 9 \\
+&amp;\text{II:} &amp; 4x+2y &amp;= 2
+\end{align*}
+\end{split}\]</div>
+<div class="figure align-default" id="gausselimination">
+<a class="reference internal image-reference" href="_images/gausselimination.png"><img alt="_images/gausselimination.png" src="_images/gausselimination.png" style="width: 20%;" /></a>
+</div>
+<p>Samler vi koefficienterne og konstanterne i en matrix, så får vi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{rr|r}
+3   &amp;   2   &amp;   9  \\
+4   &amp;   2   &amp;   2 \\
+\end{array}
+\right]
+\end{split}\]</div>
+<p>For at få denne matrix på reduceret trappeform, så skal vi have 1’ere i diagonalen og 0’ere øverst til højre og nederst til venstre i matricen. Det vil sige, at vi skal bruge de elementære operationer til at få</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{rr|r}
+3   &amp;   2   &amp;   9  \\
+4   &amp;   2   &amp;   2 \\
+\end{array}
+\right]
+\longrightarrow
+\left[
+\begin{array}{rr|r}
+1   &amp;   0   &amp;   ?  \\
+0   &amp;   1   &amp;   ? \\
+\end{array}
+\right]
+\end{split}\]</div>
+<p>For så svarer det til, at vi har ét <span class="math notranslate nohighlight">\(x\)</span> og nul <span class="math notranslate nohighlight">\(y\)</span> i første ligning og omvendt nul <span class="math notranslate nohighlight">\(x\)</span> og ét <span class="math notranslate nohighlight">\(y\)</span> i anden ligning. Til højre for den lodrette bar vil løsningerne komme til at stå. Baren agerer vores lighedstegn fra ligningerne.</p>
+<div class="figure align-default" id="gausselimination-reduced">
+<a class="reference internal image-reference" href="_images/gausselimination_reduced.png"><img alt="_images/gausselimination_reduced.png" src="_images/gausselimination_reduced.png" style="width: 20%;" /></a>
+</div>
+<p>De elementære operationer er vores rækkeoperationer, og dem skal vi bruge nu for at reducere matricen til trappeform. Vi vil betegne den øverste række med <span class="math notranslate nohighlight">\(R_1\)</span> og den nederste række med <span class="math notranslate nohighlight">\(R_2\)</span>, som egentlig blot svarer til ligning I og II henholdsvis.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{rr|r}
+3   &amp;   2   &amp;   9  \\
+4   &amp;   2   &amp;   2 \\
+\end{array}
+\right]
+\end{split}\]</div>
+<p>Vi starter med at skabe 0’erne. Det kan vi gøre ved at trække <span class="math notranslate nohighlight">\(R_2\)</span> fra <span class="math notranslate nohighlight">\(R_1\)</span>, da <span class="math notranslate nohighlight">\(2-2=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{rr|r}
+3   &amp;   2   &amp;   9  \\
+4   &amp;   2   &amp;   2 \\
+\end{array}
+\right]
+\begin{array}{l}
+\, -R_2  \\ \ 
+\end{array}
+\ 
+\longrightarrow
+\ 
+\left[
+\begin{array}{rr|r}
+-1   &amp;   0   &amp;   7  \\
+4  &amp;   2   &amp;   2 \\
+\end{array}
+\right]
+\end{split}\]</div>
+<p>For at få vores nedre venstre 0, så kan vi lægge <span class="math notranslate nohighlight">\(4R_1\)</span> til <span class="math notranslate nohighlight">\(R_2\)</span>, da <span class="math notranslate nohighlight">\(4+(-1\cdot 4) = 4-4 =0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{rr|r}
+-1   &amp;   0   &amp;   7  \\
+4  &amp;   2   &amp;   2 \\
+\end{array}
+\right]
+\begin{array}{l}
+\  \\ \,+4R_1 
+\end{array}
+\ 
+\longrightarrow
+\ 
+\left[
+\begin{array}{rr|r}
+-1   &amp;   0   &amp;   7  \\
+0  &amp;   2   &amp;   30 \\
+\end{array}
+\right]
+\end{split}\]</div>
+<p>For at få skabt 1 i øverste række ganger vi i gennem med -1 og for at få skabt 1 i nederste række ganger vi i gennem med <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{rr|r}
+-1   &amp;   0   &amp;   7  \\
+0  &amp;   2   &amp;   30 \\
+\end{array}
+\right]
+\begin{array}{l}
+\, \cdot(-1)  \\ \, \cdot(\frac{1}{2}) 
+\end{array}
+\ 
+\longrightarrow
+\ 
+\left[
+\begin{array}{rr|r}
+1   &amp;   0   &amp;   -7  \\
+0  &amp;   1   &amp;   15 \\
+\end{array}
+\right]
+\end{split}\]</div>
+<p>Af den reduceret trappematrix kan vi aflæse, at løsningen til vores to ligninger er</p>
+<div class="math notranslate nohighlight">
+\[    x = -7 \wedge y = 15\]</div>
+</div>
+</div><p>Bemærk, at denne metode kræver, at du først opstiller ligningerne, således du kolonnevis har de forskellige variabler med deres tilhørende koefficient på den ene side af lighedstegnet og på den anden side har samlet alle konstanterne.</p>
+</div>
+<div class="section" id="opgaver">
+<h2><span class="section-number">3.4.5. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+<div class="proof opgave admonition" id="opgave-2">
+<p class="admonition-title"><span class="caption-number">Opgave 3.14 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er ligningssystemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; 3x + 3y &amp;= 12 \\
+&amp;\text{II:} &amp; 2x + 3y &amp;= 6
+\end{align*}
+\end{split}\]</div>
+<p>    a) Opstil matricen, der samler koefficienterne og konstanterne fra ligningssystemet. <br />
+    b) Løs ligningssystemet ved at reducere matricen fra a) til en matrix på reduceret trappeform.</p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-3">
+<p class="admonition-title"><span class="caption-number">Opgave 3.15 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er ligningssystemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; x+3y &amp;= 1 \\
+&amp;\text{II:} &amp; 2y &amp;= 2-x
+\end{align*}
+\end{split}\]</div>
+<p>    a) Opstil matricen, der samler koefficienterne og konstanterne fra ligningssystemet. <br />
+    b) Løs ligningssystemet ved at reducere matricen fra a) til en matrix på reduceret trappeform.</p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-4">
+<p class="admonition-title"><span class="caption-number">Opgave 3.16 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er ligningssystemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; 3x-y &amp;= 3-2(x+y) \\
+&amp;\text{II:} &amp; 2x+2y-2 &amp;= 0
+\end{align*}
+\end{split}\]</div>
+<p>    a) Opstil matricen, der samler koefficienterne og konstanterne fra ligningssystemet. <br />
+    b) Løs ligningssystemet ved at reducere matricen fra a) til en matrix på reduceret trappeform.</p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-5">
+<p class="admonition-title"><span class="caption-number">Opgave 3.17 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er ligningssystemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; -2(2x-y) &amp;= 3 \\
+&amp;\text{II:} &amp; -(2y-2x) &amp;= -1
+\end{align*}
+\end{split}\]</div>
+<p>    a) Opstil matricen, der samler koefficienterne og konstanterne fra ligningssystemet. <br />
+    b) Løs ligningssystemet ved at reducere matricen fra a) til en matrix på reduceret trappeform.</p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-6">
+<p class="admonition-title"><span class="caption-number">Opgave 3.18 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er ligningssystemet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\text{I:} &amp; -x+y+4z &amp;= 1 \\
+&amp;\text{II:} &amp; 2x+2y-z &amp;= -4 \\
+&amp;\text{III:} &amp; x+4y-2z &amp;= 2
+\end{align*}
+\end{split}\]</div>
+<p>    a) Opstil matricen, der samler koefficienterne og konstanterne fra ligningssystemet. <br />
+    b) Løs ligningssystemet ved at reducere matricen fra a) til en matrix på reduceret trappeform.</p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="33enligningenubekendt.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">3.3. </span>En ligning med en ubekendt</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="35grafernesmuligheder.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">3.5. </span>Grafernes muligheder</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

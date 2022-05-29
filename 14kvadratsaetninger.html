@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.4. Kvadratsætninger</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="1.5. Faktorisering og kvadratkomplettering" href="15faktoriseringogkvadratkomplettering.html" />
+    <link rel="prev" title="1.3. Regnearterne" href="13regnearterne.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tre-vigtige-formler">
+   1.4.1. Tre vigtige formler
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   1.4.2. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="kvadratsaetninger">
+<h1><span class="section-number">1.4. </span>Kvadratsætninger<a class="headerlink" href="#kvadratsaetninger" title="Permalink til denne overskrift">¶</a></h1>
+<p>Inden vi skal til kvadratsætningerne, så er det vigtigt, at vi har styr på, hvordan vi ganger to parenteser sammen. For hvordan ganger vi parentesen sammen nedenfor?</p>
+<div class="math notranslate nohighlight">
+\[    (a+b)(c+d)\]</div>
+<p>Heldigvis har vi en meget god huskeregel om, at vi kan gange på kryds:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/k0.gif"><img alt="_images/k0.gif" src="_images/k0.gif" style="width: 480.0px; height: 270.0px;" /></a>
+</div>
+<p>Det kan vi samle i første sætning:</p>
+<div class="proof sætning admonition" id="k0">
+<p class="admonition-title"><span class="caption-number">Sætning 1.2 </span></p>
+<div class="sætning-content section" id="proof-content">
+<p>Lad <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> og <span class="math notranslate nohighlight">\(d\)</span> være vilkårlige tal, da gælder følgende identitet:</p>
+<div class="math notranslate nohighlight">
+\[    (a+b)(c+d) = ab + ac + bc + bd 
+    \tag{K0} \]</div>
+</div>
+</div><details open style = "margin-block-end: 1em">
+<summary>Bevis</summary>
+<p> 
+<p>Vi vil i beviset for sætningen bruge en kombination af regnearternes hierarki og den distributive lov.</p>
+<div class="bevis admonition" id="bevis">
+<p>Bevis. Vi skal vise, at</p>
+<div class="math notranslate nohighlight">
+\[    (a+b)(c+d)=ac+ad+bc+bd.\]</div>
+<p>Kigger vi på venstre-siden af lighedstegnet, så kunne vi lade <span class="math notranslate nohighlight">\(x=a+b\)</span>. Det kan vi gøre, eftersom den sum alligevel står i en parentes og derfor ifølge regnehierarkiet skal regnes først. Da kan vi skrive udtrykket</p>
+<div class="math notranslate nohighlight">
+\[    x(c+d)\]</div>
+<p>Denne metode kaldes ”at substituere”, og det er absolut ikke sidste gang, at du kommer til at møde den. Eftersom vi har kombinationen af <span class="math notranslate nohighlight">\(+\)</span> og <span class="math notranslate nohighlight">\(\cdot\)</span>, så kan vi bruge den distributive lov</p>
+<div class="math notranslate nohighlight">
+\[    x(c+d) = xc+xd\]</div>
+<p>Tilbagesubstituér nu <span class="math notranslate nohighlight">\(x=a+b\)</span> i udtrykket ovenfor:</p>
+<div class="math notranslate nohighlight">
+\[    (a+b)c+(a+b)d\]</div>
+<p>Igen kan vi bruge den distributive lov:</p>
+<div class="math notranslate nohighlight">
+\[    \underbrace{(a+b)c}_{=ac+bc} + \underbrace{(a+b)d}_{=ad+bd} = ac + bc + ad + bd\]</div>
+<p>Rykker vi rundt på leddene (hvilket vi kan gøre, da <span class="math notranslate nohighlight">\(+\)</span> er kommutativt) og læser op gennem lighederne, så får vi netop den lighed, der er givet i sætningen.</p>
+</div>
+</p>
+</details>
+<p>Det er en rigtig god idé, at sætte sig godt ind i beviset ovenfor, da det viser brugen af substitution, som du kommer til at bruge senere. Så, hvis ikke du forstod beviset første gang, så læs det igen.</p>
+<div class="exercise dropdown admonition" id="14kvadratsaetninger-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 1.7 </span></p>
+<div class="section" id="exercise-content">
+<p>Kan du vise, at <span class="math notranslate nohighlight">\((a-b)(c-d)=ac-ad-bc+bd\)</span>?</p>
+<details>
+<summary>Hint</summary>
+<p>
+<p>Tag udgangspunkt i beviset for <a class="reference internal" href="#k0">Sætning 1.2</a>, brug din viden omkring, hvordan man regner med negative tal og brug den distributive lov.</p>
+</p>
+</details>
+</div>
+</div>
+<div class="section" id="tre-vigtige-formler">
+<h2><span class="section-number">1.4.1. </span>Tre vigtige formler<a class="headerlink" href="#tre-vigtige-formler" title="Permalink til denne overskrift">¶</a></h2>
+<p><a class="reference internal" href="#k0">Sætning 1.2</a> har tre såkaldte specialtilfælde, som vi kender som kvadratsætningerne. Når vi siger kvadrat, så menes der 2’er potens og vi vil se, at kvadratsætningerne kan illustreres som arealer (af kvadrater) og ligeledes bevises geometrisk.</p>
+<div class="proof sætning admonition" id="k1">
+<p class="admonition-title"><span class="caption-number">Sætning 1.3 </span> (1. kvadratsætning)</p>
+<div class="sætning-content section" id="proof-content">
+<p>Lad <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> være vilkårlige tal, da gælder følgende identitet:</p>
+<div class="math notranslate nohighlight">
+\[    (a+b)^2 = a^2 + b^2 + 2ab
+    \tag{K1} \]</div>
+</div>
+</div><details style = "margin-block-end: 1em;">
+<summary>Bevis</summary>
+<p> 
+<p>Vi vil bevise ligheden ved brug af geometri. Vi ved, hvordan vi finder arealer af firkanter og det vil vi bruge her.</p>
+<div class="bevis text admonition" id="bevis">
+<p>Bevis. Ligheden kan vises ved følgende nedbrydning af kvadratet med sidelængden <span class="math notranslate nohighlight">\(a+b\)</span>:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/sqthm1.gif"><img alt="_images/sqthm1.gif" src="_images/sqthm1.gif" style="width: 640.0px; height: 360.0px;" /></a>
+</div>
+<p>Kvadratet på den to-leddet sum kan nedbrydes i mindre firkanter og når disse lægges sammen, så fås netop 1. kvadratsætning.</p>
+</div>
+</p>
+</details>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/1kvadratthm.png"><img alt="_images/1kvadratthm.png" src="_images/1kvadratthm.png" style="width: 613.5px; height: 242.25px;" /></a>
+<p class="caption"><span class="caption-number">figur 1.1 </span><span class="caption-text">Visualisering af 1. kvadratsætning</span><a class="headerlink" href="#id1" title="Permahenvisning til dette billede">¶</a></p>
+</div>
+<p><a class="reference internal" href="#k1">Første kvadratsætning</a> lyder som følgende:</p>
+<p><em><center>Kvadratet på en to-leddet sum er summen af kvadratet på første led, kvadratet på andet led og det dobbelte produkt af de to led.</center></em></p>
+<div class="proof sætning admonition" id="k2">
+<p class="admonition-title"><span class="caption-number">Sætning 1.4 </span> (2. kvadratsætning)</p>
+<div class="sætning-content section" id="proof-content">
+<p>Lad <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> være vilkårlige tal, da gælder følgende identitet:</p>
+<div class="math notranslate nohighlight">
+\[    (a-b)^2 = a^2 + b^2 - 2ab
+    \tag{K2} \]</div>
+</div>
+</div><details style = "margin-block-end: 1em">
+<summary>Bevis</summary>
+<p> 
+<p>Vi vil bevise ligheden ved brug af geometri. Vi ved, hvordan vi finder arealer af firkanter og det vil vi bruge her.</p>
+<div class="bevis text admonition" id="bevis">
+<p>Bevis. For at kunne bevise sætningen geometrisk, så vil vi antage, at sidelængden <span class="math notranslate nohighlight">\(a\)</span> opfylder, at den er længere end <span class="math notranslate nohighlight">\(b\)</span>, det vil sige at <span class="math notranslate nohighlight">\(0&lt;b&lt;a\)</span>:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/sqthm2.gif"><img alt="_images/sqthm2.gif" src="_images/sqthm2.gif" style="width: 640.0px; height: 360.0px;" /></a>
+</div>
+<p>Vi ser, at kvadratet med sidelængden <span class="math notranslate nohighlight">\(a\)</span> kan nedbrydes og vi kan opstille følgende lighed:</p>
+<div class="math notranslate nohighlight">
+\[    a^2 = b^2 + (a-b)^2 + 2b(a-b)\]</div>
+<p>Hvis vi reducerer højresiden af ligheden, så får vi</p>
+<div class="math notranslate nohighlight">
+\[    b^2 + (a-b)^2 + 2b(a-b) = b^2 + (a-b)^2 + 2ab - 2b^2 = (a-b)^2 + 2ab - b^2\]</div>
+<p>Indsætter vi det reduceret udtryk fra før, så kan vi omrokere, så vi får det ønskede:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp; &amp; a^2 &amp;= (a-b)^2 + 2ab - b^2 &amp; \\
+&amp;\Leftrightarrow &amp; (a-b)^2 &amp;= a^2 + b^2 - 2ab &amp; 
+\end{align*}
+\end{split}\]</div>
+</div>
+</p>
+</details>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/2kvadratthm.png"><img alt="_images/2kvadratthm.png" src="_images/2kvadratthm.png" style="width: 613.5px; height: 243.0px;" /></a>
+<p class="caption"><span class="caption-number">figur 1.2 </span><span class="caption-text">Visualisering af 2. kvadratsætning</span><a class="headerlink" href="#id2" title="Permahenvisning til dette billede">¶</a></p>
+</div>
+<p><a class="reference internal" href="#k2">Anden kvadratsætning</a> lyder som følgende:</p>
+<p><em><center>Kvadratet på en to-leddet differens er summen af kvadratet på første led og kvadratet på andet led, fratrukket det dobbelte produkt af de to led.</center></em></p>
+<div class="proof sætning admonition" id="k3">
+<p class="admonition-title"><span class="caption-number">Sætning 1.5 </span> (3. kvadratsætning)</p>
+<div class="sætning-content section" id="proof-content">
+<p>Lad <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> være vilkårlige tal, da gælder følgende identitet:</p>
+<div class="math notranslate nohighlight">
+\[    (a+b)(a-b) = a^2 - b^2
+    \tag{K3} \]</div>
+</div>
+</div><details style = "margin-block-end: 1em">
+<summary>Bevis</summary>
+<p>
+<p>Vi vil bevise ligheden ved brug af geometri. Vi ved, hvordan vi finder arealer af firkanter og det vil vi bruge her.</p>
+<div class="bevis text admonition" id="bevis">
+<p>Bevis. Ligesom <a class="reference internal" href="#k2">2. kvadratsætning</a>, vil vi antage, at <span class="math notranslate nohighlight">\(0&lt;b&lt;a\)</span>, og da har vi:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/sqthm3.gif"><img alt="_images/sqthm3.gif" src="_images/sqthm3.gif" style="width: 640.0px; height: 360.0px;" /></a>
+</div>
+<p>Vi forestiller os, at vi rykker det opmarkerede kvadrat med sidelængderne <span class="math notranslate nohighlight">\(a-b\)</span> og <span class="math notranslate nohighlight">\(b\)</span>, så den ryger i forlængelse med rektanglet med sidelængderne <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(a-b\)</span>. Vi kan se, at arealerne er velbevarede, hvilket betyder, at ligheden fra sætningen må gælde.</p>
+</div>
+</p>
+</details>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/3kvadratthm.png"><img alt="_images/3kvadratthm.png" src="_images/3kvadratthm.png" style="width: 613.5px; height: 233.25px;" /></a>
+<p class="caption"><span class="caption-number">figur 1.3 </span><span class="caption-text">Visualisering af 3. kvadratsætning</span><a class="headerlink" href="#id3" title="Permahenvisning til dette billede">¶</a></p>
+</div>
+<p>Tredje kvadratsætning lyder som følgende:</p>
+<p><em><center>Produktet af to tals sum og de samme to tals differens, er kvadratet på første led fratrukket kvadratet på andet led, siger tredje kvadratsætning.</center></em></p>
+<div class="exercise dropdown admonition" id="14kvadratsaetninger-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 1.8 </span> (Algebraisk visning af kvadratsætningerne)</p>
+<div class="section" id="exercise-content">
+<p>Gå tilbage til <a class="reference internal" href="#k1">1.</a>, <a class="reference internal" href="#k2">2.</a> og <a class="reference internal" href="#k3">3. kvadratsætning</a> og brug din viden om, hvordan man ganger to parenteser sammen, til at reducere kvadratsætningerne og vise, at lighederne holder.</p>
+</div>
+</div>
+</div>
+<div class="section" id="opgaver">
+<h2><span class="section-number">1.4.2. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+<div class="proof opgave admonition" id="opgave-6">
+<p class="admonition-title"><span class="caption-number">Opgave 1.5 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Reducer følgende udtryk og forklar undervejs hvilke regneregler, du bruger:</p>
+<p>    a) <span class="math notranslate nohighlight">\((a-b)(a+2b)-(a+2b)(2a-3b)\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(-(a-b)+(2a+b)(a+2b)-a^2\)</span> <br />
+    c) <span class="math notranslate nohighlight">\((a^2+b)(a+b)+a^3-2b\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(3a-(-a^2+(a-b)(2a+2b))\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-7">
+<p class="admonition-title"><span class="caption-number">Opgave 1.6 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Reducer følgende udtryk og forklar undervejs hvilke regneregler, du bruger:</p>
+<p>    a) <span class="math notranslate nohighlight">\((a-b)^2 + a^2 - 3ab\)</span> <br />
+    b) <span class="math notranslate nohighlight">\((2a+b)^2+(2a-b)^2+ab\)</span> <br />
+    c) <span class="math notranslate nohighlight">\((4a+b)(4a-b)+(a+2b)^2\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(2(2a+4b)^2-2ab-(a-b)^2\)</span></p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="13regnearterne.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">1.3. </span>Regnearterne</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="15faktoriseringogkvadratkomplettering.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Faktorisering og kvadratkomplettering</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

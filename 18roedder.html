@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.8. Rødder</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="2. Mængdeteori I" href="2maengdeteori_i.html" />
+    <link rel="prev" title="1.7. Potenser" href="17potenser.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   1.8.1. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="rodder">
+<span id="roedder"></span><h1><span class="section-number">1.8. </span>Rødder<a class="headerlink" href="#rodder" title="Permalink til denne overskrift">¶</a></h1>
+<p>Ligesom minus er det modsatte af plus, division er det modsatte af multiplikation, så er rødder det modsatte af potenser.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/rod.png"><img alt="_images/rod.png" src="_images/rod.png" style="width: 389.5px; height: 58.0px;" /></a>
+</div>
+<p>En rod består af en <em>radikand</em> og en <em>rodeksponent</em>. <span class="math notranslate nohighlight">\(\sqrt[n]{\ }\)</span> kaldes den <span class="math notranslate nohighlight">\(n\)</span>’te rod. Eftersom rødder er det modsatte af potenser, så kan vi formulere, hvad vi mener med en rod ved hjælp af potenser:</p>
+<div class="proof definition admonition" id="roedder">
+<p class="admonition-title"><span class="caption-number">Definition 1.4 </span> (Rødder)</p>
+<div class="definition-content section" id="proof-content">
+<p>Lad <span class="math notranslate nohighlight">\(a\)</span> være et vilkårligt tal. Hvis <span class="math notranslate nohighlight">\(b\)</span> opfylder</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[n]{a} = b \ \text{når}\ b^n = a,\]</div>
+<p>så kalder vi <span class="math notranslate nohighlight">\(b\)</span> den <span class="math notranslate nohighlight">\(n\)</span>’te rod af <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+</div><p>Sagt med ord, så er radikanden det tal, som vi får ved at opløfte roden til rodeksponenten. For eksempel</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[3]{8} = 2\ \text{fordi}\ 2^3 = 8.\]</div>
+<p>Ligesom potenser, så har vi også regneregler for rødder:</p>
+<div class="proof regneregler admonition" id="regneregler-1">
+<p class="admonition-title"><span class="caption-number">Regneregler 1.6 </span> (Rødder)</p>
+<div class="regneregler-content section" id="proof-content">
+<div class="math notranslate nohighlight">
+\[    \sqrt[n]{a^p} = a^{\frac{p}{n}}
+    \tag{R0}\label{r0}\]</div>
+<div class="math notranslate nohighlight">
+\[    \sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{ab}
+    \tag{R1}\label{r1}\]</div>
+<div class="math notranslate nohighlight">
+\[    \frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}
+    \tag{R2}\label{r2}\]</div>
+</div>
+</div><p>Rødder er faktisk bare potenser med brøker som eksponenter. Det er netop det, som Regneregel <span class="math notranslate nohighlight">\(\eqref{r0}\)</span> giver os. Idéen er, at</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[n]{a^n} = a\]</div>
+<p>fordi</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[n]{a^n} = a^{\frac{n}{n}} = a^1 = a.\]</div>
+<p>Så, hvis en potens under rodtegnet med samme eksponent som rodeksponenten, så vil roden blot være potensens grundtal. For eksempel <span class="math notranslate nohighlight">\(\sqrt{4^2} = 4\)</span>, da <span class="math notranslate nohighlight">\(4^2 = 16\)</span> og <span class="math notranslate nohighlight">\(\sqrt{16} = 4\)</span>.</p>
+<p>Regneregel <span class="math notranslate nohighlight">\(\eqref{r1}\)</span> siger, at hvis to rødder ganges med hinanden og de har samme rodeksponenter, så kan vi gange radikanderne og beholde rodeksponenten. Beviset minder meget om det, som vi så for Regneregel <span class="math notranslate nohighlight">\(\text{P2}\)</span> i <a class="reference internal" href="17potenser.html#potenser"><span class="std std-ref">Kapitel 1.6</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[n]{a} \cdot \sqrt[n]{b} \stackrel{\text{$\eqref{r0}$}}{=} a^{\frac{1}{n}} \cdot b^{\frac{1}{n}} = (ab)^{\frac{1}{n}} \stackrel{\text{$\eqref{r0}$}}{=} \sqrt[n]{ab}\]</div>
+<p>Regneregel <span class="math notranslate nohighlight">\(\eqref{r2}\)</span> er hel anolog med <span class="math notranslate nohighlight">\(\eqref{r1}\)</span>, men i stedet med gange er det division. Beviset minder derfor også meget om <span class="math notranslate nohighlight">\(\eqref{r1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    \frac{\sqrt[n]{a}}{\sqrt[n]{b}} \stackrel{\text{$\eqref{r0}$}}{=} \frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}} = \bigg(\frac{a}{b}\bigg)^{\frac{1}{n}} \stackrel{\text{$\eqref{r0}$}}{=} \sqrt[n]{\frac{a}{b}}\]</div>
+<p>Potensregnereglerne, som vi har brugt her, beviste vi i <a class="reference internal" href="17potenser.html#potenser"><span class="std std-ref">Kapitel 1.6</span></a>.</p>
+<div class="proof eksempel admonition" id="reksempel1">
+<p class="admonition-title"><span class="caption-number">Eksempel 1.18 </span> (Kvadratrødder og kubikrødder)</p>
+<div class="eksempel-content section" id="proof-content">
+<p>Hvis rodeksponenten er 2, så kalder vi roden for <em>kvadratroden</em>. Vi skriver ikke 2-tallet i rodeksponenten, da det i <span class="math notranslate nohighlight">\(\sqrt{\ }\)</span> implicit ligger, at rodeksponenten er 2.</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt{64} = 8,\ \text{da}\ 8^2 = 64.\]</div>
+<p>Hvis rodeksponenten er 3, så kalder vi roden for <em>kubikroden</em>.</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[3]{216} = 6,\ \text{da}\ 6^3 = 216.\]</div>
+</div>
+</div><div class="proof eksempel admonition" id="reksempel2">
+<p class="admonition-title"><span class="caption-number">Eksempel 1.19 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Arealet af en gammel CD (uden hul) er <span class="math notranslate nohighlight">\(A = 50{,}24\ \text{cm}^2\)</span>.</p>
+<center> <font size="+40"> 💿 </font> </center>️
+<p>Bestem radien for CD’en.</p>
+<p>Vi ved at arealet af en cirkel er givet ved <span class="math notranslate nohighlight">\(A = \pi r^2\)</span>, så vi kan indsætte vores kendte værdier i formlen og løse for <span class="math notranslate nohighlight">\(r\)</span>. Lad os også bruge approksimationen <span class="math notranslate nohighlight">\(\pi \approx 3{,}14\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;   &amp;   50{,}24\ \text{cm}^2 &amp;= 3{,}14r^2 \\
+&amp;\Leftrightarrow &amp;  \frac{50{,}24\ \text{cm}^2}{3{,}14} &amp;= r^2 \\
+&amp;\Leftrightarrow &amp;  16\ \text{cm}^2 &amp;= r^2 \\
+&amp;\Leftrightarrow &amp;  \sqrt{16\ \text{cm}^2} &amp;= \sqrt{r^2} \\
+&amp;\Leftrightarrow &amp;  4\ \text{cm} &amp;= r
+\end{align*}
+\end{split}\]</div>
+<p>Eftersom vi brugte en approksimation for <span class="math notranslate nohighlight">\(\pi\)</span>, så vil vores resultat også være en approksimation. Vi konkluderer, at en CD med det angivne areal er <span class="math notranslate nohighlight">\(r\approx 4\ \text{cm}\)</span>.</p>
+</div>
+</div><p>Da vi kiggede på potenser i <a class="reference internal" href="17potenser.html#potenser"><span class="std std-ref">Kapitel 1.6</span></a>, havde vi et resultat med negative grundtal. Vi kan også finde roden af et negativt tal, hvis rodeksponenten er ulige. For eksempel</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[3]{-27} = -3\ \text{da}\ (-3)^3 = -27,\]</div>
+<p>hvilket du selv kan kontrollere er korrekt med andre eksempler. Men, hvad hvis rodeksponenten er lige? Som vi så i beviset for <a class="reference internal" href="17potenser.html#negativegrundtalthm">Sætning 1.6</a>, så er <span class="math notranslate nohighlight">\((-1)^2 = 1\)</span> og ligeledes <span class="math notranslate nohighlight">\((-1)^4 = 1\)</span> osv. Vi kan altså ikke danne negative potenser, hvis eksponenten er lige. Så, at kigge på</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt{-9}\]</div>
+<p>giver ikke mening. Vi havner ved en blindgyde</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt{-9} = \sqrt{-1\cdot 9} \stackrel{\text{$\eqref{r1}$}}{=} \sqrt{-1}\cdot\sqrt{9} = \sqrt{-1}\cdot 3,\]</div>
+<p>for vi kan ikke regne <span class="math notranslate nohighlight">\(\sqrt{-1}\)</span>. Kvadratroden, og andre rødder med lige rodeksponenter, findes ikke, hvis radikanden er negativ.</p>
+<div class="proof korollar admonition" id="ligeoguligeroedder">
+<p class="admonition-title"><span class="caption-number">Korollar 1.1 </span></p>
+<div class="korollar-content section" id="proof-content">
+<p>Betragt roden <span class="math notranslate nohighlight">\(\sqrt[n]{-a}\)</span>, hvor <span class="math notranslate nohighlight">\(-a\)</span> er et negativt tal. Da gælder følgende udsagn:</p>
+<ul class="simple">
+<li><p>Hvis <span class="math notranslate nohighlight">\(n\)</span> er et lige tal, så findes roden ikke.</p></li>
+<li><p>Hvis <span class="math notranslate nohighlight">\(n\)</span> er et ulige tal, så findes roden.</p></li>
+</ul>
+</div>
+</div><details style = "margin-block-end: 1em">
+<summary>Bevis</summary>
+<p>
+<p>Vi beviser korollaret ved at bruge, hvordan rødder er defineret, samt <a class="reference internal" href="17potenser.html#negativegrundtalthm">Sætning 1.6</a>.</p>
+<div class="bevis text admonition" id="bevis">
+<p>Bevis. Antag <span class="math notranslate nohighlight">\(-a\)</span> er negativ. Da har vi fra <a class="reference internal" href="#roedder">Definition 1.4</a>, at <span class="math notranslate nohighlight">\(\sqrt[n]{-a}=b\)</span>, hvis <span class="math notranslate nohighlight">\(b^n = -a\)</span>. Fra <a class="reference internal" href="17potenser.html#negativegrundtalthm">Sætning 1.6</a> ved vi, at det er kun for <span class="math notranslate nohighlight">\(n\)</span> ulige, at potensen <span class="math notranslate nohighlight">\(b^n\)</span> kan være negativ. Det betyder, at hvis <span class="math notranslate nohighlight">\(n\)</span> er lige, så kan vi aldrig have, at <span class="math notranslate nohighlight">\(b^n\)</span> er negativ. Dermed kan vi ikke regne <span class="math notranslate nohighlight">\(\sqrt[n]{-a}\)</span> for lige <span class="math notranslate nohighlight">\(n\)</span>, og derfor må den lige rod ikke være et reelt tal.</p>
+</div>
+</p>
+</details>
+<p>Matematik handler også nogle gange om at antage ting, der ikke nødvendigvis giver mening. Antager man, at <span class="math notranslate nohighlight">\(\sqrt{-1}\)</span> er et tal, så leder dette til teorien om <em>komplekse tal</em>.</p>
+<div class="proof eksempel admonition" id="reksempel3">
+<p class="admonition-title"><span class="caption-number">Eksempel 1.20 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Vi reducerer udtrykket</p>
+<div class="math notranslate nohighlight">
+\[    2\sqrt[3]{\frac{\sqrt{256a^3}}{2b^3}}.\]</div>
+<p>Vi starter med at reducere brøken under den kubikroden:</p>
+<div class="math notranslate nohighlight">
+\[    \frac{\sqrt{256a^3}}{2b^3} \stackrel{\text{$\eqref{r1}$}}{=} \frac{\sqrt{256}\cdot\sqrt{a^3}}{2b^3} = \frac{16\sqrt{a^3}}{2b^2} = \frac{8\sqrt{a^3}}{b^3} \stackrel{\text{$\eqref{r0}$}}{=} \frac{4a^{\frac{3}{2}}}{b^3}.\]</div>
+<p>Vi går tilbage og indsætter brøken i det oprindelige udtryk og reducerer:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    2\sqrt[3]{\frac{8a^{\frac{3}{2}}}{b^3}} &amp;\stackrel{\text{$\eqref{r2}$}}{=} 2\frac{\sqrt[3]{8a^{\frac{3}{2}}}}{\sqrt[3]{b^3}} \\ 
+    &amp;\stackrel{\text{$\eqref{r1}$}}{=} 2\frac{\sqrt[3]{8}\cdot\sqrt[3]{a^{\frac{3}{2}}}}{\sqrt[3]{b^3}} \\
+    &amp;= 2\frac{2\sqrt[3]{a^{\frac{3}{2}}}}{b} \\
+    &amp;\stackrel{\text{$\eqref{r0}$}}{=} \frac{4(a^{\frac{3}{2}})^{\frac{1}{3}}}{b} \\
+    &amp;= \frac{4a^{\frac{3}{2}\cdot\frac{1}{3}}}{b} \\
+    &amp;= \frac{4a^{\frac{1}{2}}}{b} \\
+    &amp;\stackrel{\text{$\eqref{r0}$}}{=} \frac{4\sqrt{a}}{b}
+\end{align*}
+\end{split}\]</div>
+<p>Afslutningsvis kan vi konkludere, at det oprindelige udtryk kan reduceres til:</p>
+<div class="math notranslate nohighlight">
+\[    2\sqrt[3]{\frac{\sqrt{256a^3}}{2b^3}} = \frac{4\sqrt{a}}{b}\]</div>
+</div>
+</div><div class="section" id="opgaver">
+<h2><span class="section-number">1.8.1. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+<div class="proof opgave admonition" id="opgave-6">
+<p class="admonition-title"><span class="caption-number">Opgave 1.21 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Omskriv rødderne til potenser:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\sqrt{a^4}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(\sqrt[3]{a^2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\sqrt{a^2 b}\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(\sqrt[5]{a^5 b^5}\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-7">
+<p class="admonition-title"><span class="caption-number">Opgave 1.22 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Reducer følgende udtryk og forklar undervejs hvilke regneregler, du bruger:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\sqrt{\sqrt{a^3}}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(a\sqrt[3]{a^2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(a+b\sqrt{ab^2}\)</span> <br />
+    d) <span class="math notranslate nohighlight">\(2b+\sqrt{4a^2}-a\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-8">
+<p class="admonition-title"><span class="caption-number">Opgave 1.23 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Reducer følgende udtryk og forklar undervejs hvilke regneregler, du bruger:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\frac{a\sqrt{b^2}}{\sqrt{16a^3}}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(2\sqrt[3]{b^2(a+b)}\cdot\sqrt{a^3}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\sqrt[3]{\frac{27a^5}{\sqrt{a}}}\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-9">
+<p class="admonition-title"><span class="caption-number">Opgave 1.24 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>En globus har et rumfang på <span class="math notranslate nohighlight">\(V=11\ \text{cm}^3\)</span></p>
+<center> <font size="+40"> 🌐 </font> </center>️
+<p>    a) Bestem globussens diameter. <br />
+    b) Angiv globussens rumfang i liter <span class="math notranslate nohighlight">\(L\)</span>.</p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="17potenser.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">1.7. </span>Potenser</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2maengdeteori_i.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Mængdeteori I</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

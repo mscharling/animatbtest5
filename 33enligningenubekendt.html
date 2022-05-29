@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.3. En ligning med en ubekendt</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="3.4. To ligninger med to ubekendte" href="34toligningertoubekendte.html" />
+    <link rel="prev" title="3.2. Grundmængder" href="32grundmaengder.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11deskriptivstatistik.html">
+   11. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111grundlaeggendebegreber.html">
+     11.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112grupperet.html">
+     11.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="113statistiskedeskriptorer.html">
+     11.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="114deskriptiveplots.html">
+     11.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-ligninger">
+   3.3.1. Simple ligninger
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-ligninger-med-broker">
+     3.3.1.1. Simple ligninger med brøker
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-ligninger-med-hojere-ordens-led">
+     3.3.1.2. Simple ligninger med højere ordens led
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-ligninger-med-rodder">
+     3.3.1.3. Simple ligninger med rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgaver">
+   3.3.2. Opgaver
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="en-ligning-med-en-ubekendt">
+<h1><span class="section-number">3.3. </span>En ligning med en ubekendt<a class="headerlink" href="#en-ligning-med-en-ubekendt" title="Permalink til denne overskrift">¶</a></h1>
+<p>I folkeskolen lærte du at løse en ligning med en ubekendt. I næste kapitel skal du lære at løse to ligninger med to ubekendte.</p>
+<p>Når vi snakker om ligninger, så er vi vant til, at den ubekendte er <span class="math notranslate nohighlight">\(x\)</span>. I bund og grund kan den ubekendte tage mange former og behøver ikke være <span class="math notranslate nohighlight">\(x\)</span>. Det kommer an på konteksten, for mange gange kan det give mening, at det er et bestemt bogstav, der bruges som den ubekendte. For eksempel, hvis en rektangel har arealet 16 og længde 3, så kan vi hurtigt bestemme, at bredden er 6. Vi kender jo arealformlen for et rektangel <span class="math notranslate nohighlight">\(A=lb\)</span>, fra folkeskolen. Så det, som vi faktisk gør, er, at vi opstiller ligningen</p>
+<div class="math notranslate nohighlight">
+\[    3b = 16,\]</div>
+<p>hvor den ubekendte er <span class="math notranslate nohighlight">\(b\)</span>. Det giver god mening, for det er jo det bogstav, som vi normalt bruger i arealformlen.</p>
+<p>I dette kapitel vil vi dog holde os til <span class="math notranslate nohighlight">\(x\)</span>, og så bare huske på, at den ubekendte kunne være ethvert bogstav.</p>
+<div class="section" id="simple-ligninger">
+<h2><span class="section-number">3.3.1. </span>Simple ligninger<a class="headerlink" href="#simple-ligninger" title="Permalink til denne overskrift">¶</a></h2>
+<p>Et eksempel på én ligning med én ubekendt kunne være</p>
+<div class="math notranslate nohighlight">
+\[    3(2x+12)=18+3x.\]</div>
+<p>Som du kunne læse i forrige afsnit, så skal vi, når vi løser en ligning, finde det <span class="math notranslate nohighlight">\(x\)</span>, der opfylder, at det der ender med at stå på venstresiden af lighedstegnet, bliver det samme som det, der ender med at stå på højresiden. Derfor vil løsningen her være <span class="math notranslate nohighlight">\(x=-6\)</span>, da</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    &amp;3(2\cdot (-6) + 12) = 3\cdot 0 = 0\\
+    &amp;18+3\cdot (-6) = 18 + (-18) = 0.  
+\end{align*}
+\end{split}\]</div>
+<p>Det er en god idé, at du ved, hvad der foregår, når du løser en ligning. Derfor er det en god øvelse at løse ligningerne i trin og så forklare, hvad der sker i de forskellige trin.</p>
+<div class="proof eksempel admonition" id="enligningenubekendteks1">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.4 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    2(x-8)+4x-12=2-3(2-4x)\]</div>
+<p>Først skal vi bestemme grundmængden. Eftersom, der hverken er brøker eller rødder i ligningen, så ser vi, at <span class="math notranslate nohighlight">\(G=\mathbb{R}\)</span>.</p>
+<p>Ligningen ser forholdsvis kompliceret ud, men vi kan reducere den til noget, som er nemmere at have med at gøre. Det gør vi ved først at ordne ligningen. Det betyder, at vi regner parenteserne ud og samler alt, der har med <span class="math notranslate nohighlight">\(x\)</span> at gøre på den ene side og resten på den anden side af lighedstegnet. En god huskeregel er at samle <span class="math notranslate nohighlight">\(x\)</span>’erne på den side af lighedstegnet, hvor der er flest af dem.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  2(x-8)+4x-12 &amp;= 2-3(2-4x)     &amp;   &amp;\text{Udregn parenteserne} \\
+&amp;\Leftrightarrow &amp;  2x-16+4x-12 &amp;= 2-6+12x        &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  6x-28 &amp;= -4+12x               &amp;   &amp;\text{Saml $x$'erne på højresiden} \\
+&amp;\Leftrightarrow &amp;  \cancel{6x}-28\cancel{-6x} &amp;= -4+12x-6x &amp;   &amp;\text{Saml resten på venstresiden} \\
+&amp;\Leftrightarrow &amp;  -28+4  &amp;= \cancel{-4}+12x-6x\cancel{+4} &amp;  &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  -24 &amp;= 6x                     &amp;   &amp;\text{Dividér med 6 på begge sider} \\
+&amp;\Leftrightarrow &amp;  \frac{-24}{6} &amp;= \frac{\cancel{6}x}{\cancel{6}} &amp;   &amp;\text{Regn brøken på venstresiden} \\
+&amp;\Leftrightarrow &amp;  -4 &amp;= x
+\end{align*}
+\end{split}\]</div>
+<p>Det er altid en god idé at lave en kontrol. Lad os indsætte <span class="math notranslate nohighlight">\(x=-4\)</span> i vores oprindelige ligningsudtryk:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp; 2(-4-8)+4\cdot(-4)-12 &amp; -24 - 16 - 12 = -52 \\
+&amp; 2-3(2-4\cdot(-4))=2-3(2+16) = -52
+\end{align*}
+\end{split}\]</div>
+<p>Løsningen giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div><p>Når vi løser en ligning, som vi lige gjorde i <a class="reference internal" href="#enligningenubekendteks1">Eksempel 3.4</a>, så udnytter vi, at »en regneoperator har en modsat regneoperator«: Forestil dig, at <span class="math notranslate nohighlight">\(a\)</span> er et eller andet tal:</p>
+<ul class="simple">
+<li><p>Det modsatte af at lægge <span class="math notranslate nohighlight">\(a\)</span> til er at trække <span class="math notranslate nohighlight">\(a\)</span> fra og omvendt.</p></li>
+<li><p>Det modsatte af at gange med <span class="math notranslate nohighlight">\(a\)</span> er at dividere med <span class="math notranslate nohighlight">\(a\)</span> og omvendt.</p></li>
+<li><p>Det modsatte af at tage <span class="math notranslate nohighlight">\(a\)</span> i <span class="math notranslate nohighlight">\(n\)</span>’te potens er at tage den <span class="math notranslate nohighlight">\(n\)</span>’te rod og omvendt.</p></li>
+</ul>
+<div class="exercise dropdown admonition" id="33enligningenubekendt-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 3.1 </span></p>
+<div class="section" id="exercise-content">
+<p>Gå tilbage til <a class="reference internal" href="#enligningenubekendteks1">Eksempel 3.4</a>.</p>
+<p>Forklar ved brug af modsatte regneoperationer, hvad der sker i følgende trin:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp; &amp; &amp;\ \ \,\vdots &amp; &amp;\\
+&amp;\text{Trin 3} &amp; &amp;\Leftrightarrow &amp; \cancel{6x}-28\cancel{-6x} &amp;= -4+12x-6x \\
+&amp;\text{Trin 4} &amp; &amp;\Leftrightarrow &amp; -28+4  &amp;= \cancel{-4}+12x-6x\cancel{+4} \\
+&amp; &amp; &amp;\ \ \,\vdots &amp; &amp;\\
+&amp;\text{Trin 6} &amp; &amp;\Leftrightarrow &amp; \frac{-24}{6} &amp;= \frac{\cancel{6}x}{\cancel{6}}
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+<p>Ligningen fra <a class="reference internal" href="#enligningenubekendteks1">Eksempel 3.4</a> kaldes en simpel ligning, og kan reduceres ned til formen</p>
+<div class="math notranslate nohighlight">
+\[    ax+b=c.\]</div>
+<p>Simple ligninger har formen som førstegradsligninger og senere vil vi beskæftige os med højere ordens ligninger. Vi vil især gå i dybden med andengradsligninger. Grunden til, at vi kalder dette en førstegradsligning, skyldes, at <span class="math notranslate nohighlight">\(x\)</span> kan skrives som <span class="math notranslate nohighlight">\(x=x^1\)</span>.</p>
+<p>Kan vi reducere ligninger ned på denne form, så har vi en sætning for, hvordan løsningen vil være givet:</p>
+<div class="proof sætning admonition" id="loesningfoerstegrad">
+<p class="admonition-title"><span class="caption-number">Sætning 3.1 </span> (Løsningsformlen for førstegradsligninger)</p>
+<div class="sætning-content section" id="proof-content">
+<p>Givet er en ligning på formen</p>
+<div class="math notranslate nohighlight">
+\[    ax+b=0,\]</div>
+<p>hvor <span class="math notranslate nohighlight">\(a\neq 0\)</span>. Da er løsningen til ligningen givet ved</p>
+<div class="math notranslate nohighlight">
+\[    x = -\frac{b}{a}.\]</div>
+</div>
+</div><details style = "margin-block-end: 1em">
+<summary>Bevis</summary>
+<p>
+<p>Vi beviser sætningen ved at bruge de elementære operationer beskrevet i <a class="reference internal" href="31lighedogligevaegt.html#lighedogligevaegt"><span class="std std-ref">Kapitel 3.1</span></a>.</p>
+<div class="bevis text admonition" id="bevis">
+<p>Bevis. Antag <span class="math notranslate nohighlight">\(a\neq 0\)</span> og at vi har en ligning på formen</p>
+<div class="math notranslate nohighlight">
+\[    ax+b=0.
+    
+\]</div>
+<p>Vi løser ligningen ved brug af de elementære operationer:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  ax+b &amp;= 0     \\
+&amp;\Leftrightarrow &amp;  ax &amp;= -b    \\         
+&amp;\Leftrightarrow &amp;  x &amp;= -\frac{b}{a} &amp;   &amp; 
+\end{align*}
+\end{split}\]</div>
+<p>Sidste trin giver resultatet fra sætningen.</p>
+</div>
+</p>
+</details>
+<div class="exercise dropdown admonition" id="33enligningenubekendt-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 3.2 </span></p>
+<div class="section" id="exercise-content">
+<p>I beviset for <a class="reference internal" href="#loesningfoerstegrad">Sætning 3.1</a> er trinene for løsningen af ligningen »grove«. Lav samtlige løsningstrin og skriv, hvad du gør og kom frem til samme resultat.</p>
+</div>
+</div>
+<div class="exercise dropdown admonition" id="33enligningenubekendt-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 3.3 </span></p>
+<div class="section" id="exercise-content">
+<p>Hvorfor er det vigtigt, at <span class="math notranslate nohighlight">\(a\neq 0\)</span> i <a class="reference internal" href="#loesningfoerstegrad">Sætning 3.1</a>?</p>
+<details>
+<summary>Hint</summary>
+<p>
+<p>Hvad sker der, hvis <span class="math notranslate nohighlight">\(a=0\)</span> i ligningen <span class="math notranslate nohighlight">\(ax+b=0\)</span>?</p>
+</p>
+</details>
+</div>
+</div>
+<div class="proof korollar admonition" id="loesningfoerstegrad2">
+<p class="admonition-title"><span class="caption-number">Korollar 3.1 </span></p>
+<div class="korollar-content section" id="proof-content">
+<p>Givet er en ligning på formen</p>
+<div class="math notranslate nohighlight">
+\[    ax+b=c,\]</div>
+<p>hvor <span class="math notranslate nohighlight">\(a\neq 0\)</span>. Da er løsningen til ligningen givet ved</p>
+<div class="math notranslate nohighlight">
+\[    x = \frac{c-b}{a}.\]</div>
+</div>
+</div><details style = "margin-block-end: 1em">
+<summary>Bevis</summary>
+<p>
+<p>Korollaret er et resultat af <a class="reference internal" href="#loesningfoerstegrad">Sætning 3.1</a>, hvor vi vælger <span class="math notranslate nohighlight">\(b\)</span> på en bestemt måde.</p>
+<div class="bevis text admonition" id="bevis">
+<p>Bevis. Lad <span class="math notranslate nohighlight">\(b=\tilde{b} - c\)</span> i <a class="reference internal" href="#loesningfoerstegrad">Sætning 3.1</a>, og brug resultatet.</p>
+</div>
+</p>
+</details>
+<div class="exercise dropdown admonition" id="33enligningenubekendt-exercise-6">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 3.4 </span></p>
+<div class="section" id="exercise-content">
+<p>Fuldend beviset for <a class="reference internal" href="#loesningfoerstegrad2">Korollar 3.1</a> ved rent faktisk at gøre det, der bliver skrevet i beviset for korollaret. Kan du endda selv ved hjælp af de elementære operationer komme frem til resultatet i korollaret?</p>
+</div>
+</div>
+<div class="section" id="simple-ligninger-med-broker">
+<h3><span class="section-number">3.3.1.1. </span>Simple ligninger med brøker<a class="headerlink" href="#simple-ligninger-med-broker" title="Permalink til denne overskrift">¶</a></h3>
+<p>Har vi ligninger der indeholder brøker, så skal vi være opmærksomme, som vi også så i <a class="reference internal" href="32grundmaengder.html#grundmaengder"><span class="std std-ref">Kapitel 3.2</span></a>. Det behøver vi dog ikke nødvendigvis at være, hvis ikke <span class="math notranslate nohighlight">\(x\)</span>’et står i nævneren. For eksempel</p>
+<div class="math notranslate nohighlight">
+\[    \frac{2x}{3} - 1 = -5\]</div>
+<p>har grundmængden <span class="math notranslate nohighlight">\(G=\mathbb{R}\)</span>. Vi kan også se, at dette er en førstegradsligning, da</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                   &amp;           \frac{2x}{3} - 1 &amp;= -5 \\
+&amp;\Leftrightarrow    &amp;           \frac{2}{3}x - 1 &amp;= -5.
+\end{align*}
+\end{split}\]</div>
+<p>Vi kan »hive« <span class="math notranslate nohighlight">\(x\)</span>’et ned foran brøken, da vi har en brøkregneregel, der giver os dette. Det betyder, at vi kan bruge <a class="reference internal" href="#loesningfoerstegrad2">Korollar 3.1</a> til at finde løsningen:</p>
+<div class="math notranslate nohighlight">
+\[    x = \frac{-5-(-1)}{\frac{2}{3}} = \frac{-4}{\frac{2}{3}} = \frac{-4\cdot 3}{2} = \frac{-12}{2} = -6.\]</div>
+<div class="exercise dropdown admonition" id="33enligningenubekendt-exercise-7">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 3.5 </span></p>
+<div class="section" id="exercise-content">
+<p>Løs <span class="math notranslate nohighlight">\(\frac{2x}{3} - 1 = -5\)</span> ved at isolere <span class="math notranslate nohighlight">\(x\)</span> i ligningen på sædvanligvis. Får du også <span class="math notranslate nohighlight">\(x=-6\)</span>, som <a class="reference internal" href="#loesningfoerstegrad">Sætning 3.1</a> foreslår?</p>
+</div>
+</div>
+<div class="proof eksempel admonition" id="simpelligningmedbroek1">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.5 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    5x + 1 - \frac{(2 - x)(2x - 10)}{3} = \frac{2x^2}{3}\]</div>
+<p>Først bestemmer vi grundmængden. Eftersom vi ikke har <span class="math notranslate nohighlight">\(x\)</span> i nævneren, så må <span class="math notranslate nohighlight">\(G=\mathbb{R}\)</span>. Vi løser dernæst ligningen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  5x + 1 - \frac{(2 - x)(2x - 10)}{3} &amp;= \frac{2x^2}{3}     &amp;   &amp;\text{Udregn parenteserne} \\
+&amp;\Leftrightarrow &amp;  5x + 1 - \frac{4x-20-2x^2+10x}{3} &amp;= \frac{2x^2}{3}     &amp;   &amp;\text{Reducér tælleren} \\
+&amp;\Leftrightarrow &amp;  5x + 1 - \frac{-2x^2+14x-20}{3} &amp;= \frac{2x^2}{3}     &amp;   &amp;\text{Gang med 3 på begge sider} \\
+&amp;\Leftrightarrow &amp;  3\bigg(5x + 1 - \frac{-2x^2+14x-20}{3}\bigg) &amp;= \frac{2x^2}{\cancel{3}}\cdot\cancel{3}     &amp;   &amp;\text{Gang 3 ind i parentes} \\
+&amp;\Leftrightarrow &amp;  15x + 3 - (-2x^2+14x-20) &amp;= 2x^2     &amp;   &amp;\text{Reducér venstresiden} \\ 
+&amp;\Leftrightarrow &amp;  2x^2 + x + 23 &amp;= 2x^2     &amp;   &amp;\text{Træk $2x^2$ fra på begge sider} \\
+&amp;\Leftrightarrow &amp;  \cancel{2x^2} + x + 23 \cancel{-2x^2} &amp;= \cancel{2x^2} \cancel{-2x^2} &amp;   &amp;\text{Reducér begge sider} \\  
+&amp;\Leftrightarrow &amp;  x + 23 &amp;= 0 &amp;   &amp;\text{Træk 23 fra på begge sider} \\  
+&amp;\Leftrightarrow &amp;  x \cancel{+23} \cancel{-23} &amp;= 0 - 23   &amp;   &amp;\text{Reducér begge sider} \\  
+&amp;\Leftrightarrow &amp;  x &amp;= - 23   &amp;   &amp; \\  
+\end{align*}
+\end{split}\]</div>
+<p>Vi laver vores kontrol. Indsæt <span class="math notranslate nohighlight">\(x= - 23\)</span> i vores oprindelige ligningsudtryk. Vi regner først venstresiden:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+5\cdot(-23) + 1 - \frac{(2-(-23))(2\cdot(-23)-10)}{3} &amp;= -115 + 1 - \frac{25\cdot (-56)}{3} \\ 
+    &amp;= -115 + 1 - \frac{-1400}{3} \\
+    &amp;= \frac{-115\cdot 3}{3} + \frac{1\cdot 3}{3} - \frac{-1400}{3} \\
+    &amp;= \frac{-345+3-(-1400)}{3} \\
+    &amp;= \frac{1058}{3} \\
+\end{align*}
+\end{split}\]</div>
+<p>Vi regner dernæst højresiden:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2\cdot(-23)^2}{3} = \frac{2\cdot 529}{3} = \frac{1058}{3}\]</div>
+<p>Løsningen giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div><div class="proof eksempel admonition" id="simpelligningmedbroek2">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.6 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    \frac{5}{2x + 1} - \frac{1}{2x - 4} = \frac{9}{12x + 6}\]</div>
+<p>Først bestemmer vi grundmængden. Vi har tre brøker med <span class="math notranslate nohighlight">\(x\)</span> i nævneren, hvilket potentielt betyder, at vi kan have tre <span class="math notranslate nohighlight">\(x\)</span>-værdier, der kan give 0 i nævnerne. Betragt først</p>
+<div class="math notranslate nohighlight">
+\[    2x+1 = 0,\]</div>
+<p>der løses af <span class="math notranslate nohighlight">\(x=-\frac{1}{2}\)</span>. Betragt dernæst</p>
+<div class="math notranslate nohighlight">
+\[    2x-4 = 0,\]</div>
+<p>der løses af <span class="math notranslate nohighlight">\(x=2\)</span>. Betragt afslutningsvis</p>
+<div class="math notranslate nohighlight">
+\[    12x + 6 = 0,\]</div>
+<p>der også løses af <span class="math notranslate nohighlight">\(x=-\frac{1}{2}\)</span>. Det betyder, at grundmængden er givet ved</p>
+<div class="math notranslate nohighlight">
+\[    G = \bigg\{ x \in \mathbb{R} \mid x \neq -\frac{1}{2} \vee x\neq 2 \bigg\}.\]</div>
+<p>Vi løser dernæst ligningen. Vi gennemgår dette eksempel lidt mere i detaljen, da det kan være ret kompliceret at reducere denne ligning til en simpel ligning:</p>
+<div class="math notranslate nohighlight">
+\[    \frac{5}{2x + 1} - \frac{1}{2x - 4} = \frac{9}{12x + 6}\]</div>
+<p>Vi starter med at finde fællesnævner på venstresiden:</p>
+<div class="math notranslate nohighlight">
+\[    \Leftrightarrow \quad  \frac{5(2x-4)-(2x+1)}{(2x + 1)(2x-4)} = \frac{9}{12x + 6}\]</div>
+<p>Vi kan dernæst faktorisere 6 ud i nævneren på højresiden:</p>
+<div class="math notranslate nohighlight">
+\[    \Leftrightarrow \quad \frac{5(2x-4)-(2x+1)}{(2x + 1)(2x-4)} = \frac{9}{6(2x + 1)}\]</div>
+<p>Bemærk, at vi også har <span class="math notranslate nohighlight">\(2x+1\)</span> i nævneren på venstresiden, så hvis vi forlænger brøken på højresiden med <span class="math notranslate nohighlight">\(2x-4\)</span>, og samtidig forlænger med 6 på venstresiden, så har vi også skabt fællesnævner henover lighedstegnet:</p>
+<div class="math notranslate nohighlight">
+\[    \Leftrightarrow \quad \frac{6(5(2x-4)-(2x+1))}{6(2x+1)(2x-4)} = \frac{9(2x-4)}{6(2x+1)(2x-4)}\]</div>
+<p>Ganger vi nu med <span class="math notranslate nohighlight">\(6(2x+1)(2x-4)\)</span> på begge sider, så fjerner vi brøken på begge sider, da nævneren netop går ud med det, som vi ganger med:</p>
+<div class="math notranslate nohighlight">
+\[    \Leftrightarrow \quad 6(5(2x-4)-(2x+1)) = 9(2x-4)\]</div>
+<p>Vi har nu en simpel ligning og løser den på sædvanligvis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                   &amp;   6(5(2x-4)-(2x+1)) &amp;= 9(2x-4) &amp;  &amp;\text{Udregn parenteserne på begge sider}\\
+&amp;\Leftrightarrow    &amp;   48x-126 &amp;= 18x-36            &amp;  &amp;\text{Saml x'erne på venstresiden}\\
+&amp;\Leftrightarrow    &amp;   48x-126-18x &amp;= \cancel{18x}-36\cancel{-18x} &amp;   &amp;\text{Saml resten på højresiden}\\
+&amp;\Leftrightarrow    &amp;   48x\cancel{-126}-18x\cancel{+126}&amp;= -36+126 &amp;   &amp;\text{Reducér begge sider}\\
+&amp;\Leftrightarrow    &amp;   30x &amp;= 90 &amp;   &amp;\text{Dividér med 30 på begge sider}\\
+&amp;\Leftrightarrow    &amp;   \frac{\cancel{30}x}{\cancel{30}} &amp;= \frac{90}{30} &amp;   &amp;\text{Regn brøken på højresiden}\\
+&amp;\Leftrightarrow    &amp;   x &amp;= 3 &amp;   &amp; \\
+\end{align*}
+\end{split}\]</div>
+<p>Vi laver vores kontrol. Indsæt <span class="math notranslate nohighlight">\(x = 3\)</span> i vores oprindelige ligningsudtryk. Vi regner først venstresiden:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\frac{5}{2\cdot 3 + 1} - \frac{1}{2 \cdot 3 - 4} &amp;= \frac{5}{7}-\frac{1}{2} \\
+    &amp;= \frac{5\cdot 2 - 1\cdot 7}{7\cdot 2} \\
+    &amp;= \frac{10-7}{14} \\
+    &amp;= \frac{3}{14}
+\end{align*}
+\end{split}\]</div>
+<p>Vi regner dernæst højresiden:</p>
+<div class="math notranslate nohighlight">
+\[\frac{9}{12\cdot 3 + 6} = \frac{9}{42} = \frac{9:3}{42:3} = \frac{3}{14}\]</div>
+<p>Løsningen giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div></div>
+<div class="section" id="simple-ligninger-med-hojere-ordens-led">
+<span id="simpleligningermedhoejereordensled"></span><h3><span class="section-number">3.3.1.2. </span>Simple ligninger med højere ordens led<a class="headerlink" href="#simple-ligninger-med-hojere-ordens-led" title="Permalink til denne overskrift">¶</a></h3>
+<p>Som vi har set, så var simple ligninger nogle, der kunne reduceres ned på formen af førstegradsligninger</p>
+<div class="math notranslate nohighlight">
+\[    ax+b=0.\]</div>
+<p>Men vi kan også have simple ligninger, der har formen</p>
+<div class="math notranslate nohighlight">
+\[    ax^n + b = 0.\]</div>
+<p>Disse typer ligninger kalder vi <em>simple ligninger med højere ordens led</em>. Det kunne for eksempel være <span class="math notranslate nohighlight">\(x^4 = 16\)</span>, som også er en fjerdegradsligning, <span class="math notranslate nohighlight">\(2x^3 = 18\)</span>, som også er en tredjegradsligning eller <span class="math notranslate nohighlight">\(x^2 + 4 = 8\)</span>, som også er en andengradsligning. Når vi snakker om ordenen eller graden, så er det den højeste eksponent, der bestemmer, hvad graden af ligningen er. Vi kan nemlig også have ligninger med flere led med forskellige grader. For eksempel</p>
+<div class="math notranslate nohighlight">
+\[    2x^2 + 4x - 8 = 0\]</div>
+<p>er en andengradsligning, da den højeste eksponent er 2, men dette er ikke en simpel ligning, da den ikke kan reduceres til formen fra før. Det skyldes, at vi her har leddet <span class="math notranslate nohighlight">\(4x\)</span>. Men hvis ligningen kun var</p>
+<div class="math notranslate nohighlight">
+\[    2x^2 - 8 = 0,\]</div>
+<p>så var vi i tilfældet med en simpel ligning af anden grad eller anden orden.</p>
+<div class="proof eksempel admonition" id="simpelligninguligegrad">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.7 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    x^3 - 1 = 124\]</div>
+<p>Først bestemmer vi grundmængden. Eftersom vi ikke har rødder eller brøker i vores oprindelige ligningsudtryk, så må <span class="math notranslate nohighlight">\(G=\mathbb{R}\)</span>. Vi løser dernæst ligningen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  x^3 - 1 &amp;= 124     &amp;   &amp;\text{Læg 1 til på begge sider} \\
+&amp;\Leftrightarrow &amp;  x^3 \cancel{-1} \cancel{+1} &amp;= 124 + 1      &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  x^3 &amp;= 125               &amp;   &amp;\text{Tag $\sqrt[3]{\ }$ på begge sider} \\
+&amp;\Leftrightarrow &amp;  \sqrt[\cancel{3}]{x^{\cancel{3}}} &amp;= \sqrt[3]{125} &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  x &amp;= 5                    &amp;   &amp; 
+\end{align*}
+\end{split}\]</div>
+<p>Vi laver vores kontrol. Indsæt <span class="math notranslate nohighlight">\(x=5\)</span> i vores oprindelige ligningsudtryk:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+&amp; 5^3 - 1 = 125 - 1 = 124
+\end{align*}
+\]</div>
+<p>Løsningen giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div><div class="proof eksempel admonition" id="simpelligningligegrad">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.8 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    4x^2 + 12 = 268\]</div>
+<p>Først bestemmer vi grundmængden. Eftersom vi ikke har rødder eller brøker i vores oprindelige ligningsudtryk, så må <span class="math notranslate nohighlight">\(G=\mathbb{R}\)</span>. Vi løser dernæst ligningen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  4x^2 + 12 &amp;= 268     &amp;   &amp;\text{Træk 12 fra på begge sider} \\
+&amp;\Leftrightarrow &amp;  4x^2 \cancel{+12} \cancel{-12} &amp;= 268 - 12      &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  4x^2 &amp;= 256               &amp;   &amp;\text{Dvidér med 4 på begge sider} \\
+&amp;\Leftrightarrow &amp;  \frac{\cancel{4}x^2}{\cancel{4}} &amp;= \frac{256}{4} &amp; &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  x^2 &amp;= 64           &amp;   &amp;\text{Tag $\sqrt{\ }$ på begge sider} \\
+&amp;\Leftrightarrow &amp;  \sqrt{x^{\cancel{2}}} &amp;= \pm \sqrt{64} &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  x &amp;= \pm 8                    &amp;   &amp; 
+\end{align*}
+\end{split}\]</div>
+<p>Bemærk, at vi har to løsninger, nemlig <span class="math notranslate nohighlight">\(x=8\)</span> eller <span class="math notranslate nohighlight">\(x=-8\)</span>. Det skyldes, at når vi har en lige eksponent, så vil både et tal og det modsatte tal give samme potens. Lad os lave vores kontrol med begge løsninger og overbevise, at dette gælder generelt.</p>
+<p>Indsæt <span class="math notranslate nohighlight">\(x=8\)</span> i vores oprindelige ligningsudtryk:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+&amp; 4\cdot 8^2 + 12 = 4\cdot 64 + 12 = 256 + 12 = 268
+\end{align*}
+\]</div>
+<p>Indsæt nu <span class="math notranslate nohighlight">\(x=-8\)</span> i vores oprindelige ligningsudtryk:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+&amp; 4\cdot (-8)^2 + 12 = 4\cdot 64 + 12 = 256 + 12 = 268
+\end{align*}
+\]</div>
+<p>Løsningerne giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div><p>Som du måske kan aflede af de to eksempler, så sker der noget med antallet af løsninger, når graden er lige eller ulige.</p>
+<ul class="simple">
+<li><p>Hvis graden er lige og <span class="math notranslate nohighlight">\(\frac{c-b}{a}&gt;0\)</span>, så har vi, ligesom <a class="reference internal" href="#simpelligningligegrad">Eksempel 3.8</a>, to reelle løsninger givet ved</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[    x = \pm \sqrt[n]{\frac{c-b}{a}}.\]</div>
+<ul class="simple">
+<li><p>Hvis graden er ulige, så har vi, ligesom <a class="reference internal" href="#simpelligninguligegrad">Eksempel 3.7</a>, en reel løsning givet ved</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[    x = \sqrt[n]{\frac{c-b}{a}}.\]</div>
+<div class="exercise dropdown admonition" id="33enligningenubekendt-exercise-12">
+
+<p class="admonition-title"><span class="caption-number">Løbende øvelse 3.6 </span></p>
+<div class="section" id="exercise-content">
+<p>Lav tre eksempler på simple ligninger med højere ordens led af lige grad og overbevis dig selv om, at første punkt ovenfor er sand ved at bruge løsningsformlen.</p>
+</div>
+</div>
+</div>
+<div class="section" id="simple-ligninger-med-rodder">
+<h3><span class="section-number">3.3.1.3. </span>Simple ligninger med rødder<a class="headerlink" href="#simple-ligninger-med-rodder" title="Permalink til denne overskrift">¶</a></h3>
+<p>Vi kan også møde ligninger på formen</p>
+<div class="math notranslate nohighlight">
+\[    a\sqrt[n]{x} + b = 0.\]</div>
+<p>Husk, når vi arbejder med de lige rødder i ligninger, så skal radikanden være positiv, som vi også diskuterede i <a class="reference internal" href="32grundmaengder.html#grundmaengder"><span class="std std-ref">Kapitel 3.2</span></a>.</p>
+<div class="proof eksempel admonition" id="simpelligninguligerod">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.9 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    \sqrt[3]{x} - 7 = -10\]</div>
+<p>Først bestemmer vi grundmængden. Eftersom vi har med en ulige rod at gøre, så må <span class="math notranslate nohighlight">\(G=\mathbb{R}\)</span>. Vi løser dernæst ligningen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  \sqrt[3]{x} - 7 &amp;= -10     &amp;   &amp;\text{Læg 7 til på begge sider} \\
+&amp;\Leftrightarrow &amp;  \sqrt[3]{x} \cancel{-7} \cancel{+7} &amp;= -10 + 7     &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  \sqrt[3]{x} &amp;= -3              &amp;   &amp;\text{Tag $(\ )^3$ på begge sider} \\
+&amp;\Leftrightarrow &amp;  (\sqrt[\cancel{3}]{x})^{\cancel{3}} &amp;= (-3)^3 &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  x &amp;= -27                    &amp;   &amp; 
+\end{align*}
+\end{split}\]</div>
+<p>Vi laver vores kontrol. Indsæt <span class="math notranslate nohighlight">\(x=-27\)</span> i vores oprindelige ligningsudtryk:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+&amp; \sqrt[3]{-27} - 7 = -3 - 7 = - 10
+\end{align*}
+\]</div>
+<p>Løsningen giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div><div class="proof eksempel admonition" id="simpelligningligerod">
+<p class="admonition-title"><span class="caption-number">Eksempel 3.10 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Lad os løse ligningen:</p>
+<div class="math notranslate nohighlight">
+\[    2\sqrt[4]{x} + 1 = 2\]</div>
+<p>Først bestemmer vi grundmængden. Eftersom vi har med en lige rod at gøre, så må <span class="math notranslate nohighlight">\(G=\{x\in\mathbb{R}\mid x\geq 0\}\)</span>. Vi løser dernæst ligningen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                &amp;  2\sqrt[4]{x} + 1 &amp;= 2     &amp;   &amp;\text{Træk 1 fra på begge sider} \\
+&amp;\Leftrightarrow &amp;  2\sqrt[4]{x} \cancel{+1} \cancel{-1} &amp;= 2 - 1    &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  2\sqrt[4]{x} &amp;= 1              &amp;   &amp;\text{Dividér med 2 på begge sider} \\
+&amp;\Leftrightarrow &amp;  \frac{\cancel{2}\sqrt[4]{x}}{\cancel{2}} &amp;= \frac{1}{2}     &amp;   &amp;\text{Reducér begge sider} \\
+&amp;\Leftrightarrow &amp;  \sqrt[4]{x} &amp;= \frac{1}{2}     &amp;   &amp;\text{Tag $(\ )^4$ på begge sider} \\
+&amp;\Leftrightarrow &amp;  (\sqrt[\cancel{4}]{x})^{\cancel{4}} &amp;= \bigg(\frac{1}{2} \bigg)^4   &amp;   &amp;\text{Reducér begge sider} \\ 
+&amp;\Leftrightarrow &amp;  x &amp;= \frac{1}{16}
+\end{align*}
+\end{split}\]</div>
+<p>Vi laver vores kontrol. Indsæt <span class="math notranslate nohighlight">\(x=\frac{1}{16}\)</span> i vores oprindelige ligningsudtryk:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+&amp; 2\sqrt[4]{\frac{1}{16}} + 1 = 2\cdot\frac{\sqrt[4]{1}}{\sqrt[4]{16}} + 1 = \cancel{2}\cdot\frac{1}{\cancel{2}} + 1 = 1+1 = 2 
+\end{align*}
+\]</div>
+<p>Løsningen giver, at venstre- og højresiden af ligningen er identiske.</p>
+</div>
+</div><p>Er du blevet sikker nok i din ligningsløsning, så behøver du ikke nedskrive alle trin. Der findes også en tommelfinger regel, der siger, at hvis du skal fjerne et element på den ene side af lighedstegnet, så kan du blot »trække« elementet henover lighedstegnet og ændre »fortegnet«.</p>
+</div>
+</div>
+<div class="section" id="opgaver">
+<h2><span class="section-number">3.3.2. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">¶</a></h2>
+<div class="proof opgave admonition" id="opgave-15">
+<p class="admonition-title"><span class="caption-number">Opgave 3.4 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(2 - 4(x + 2) = 3(-x - 8) + 2x\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(-5x + 2(4 + 5x) = -x + 2\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(2(x + 3) - 8(2 - 2x) = 2\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(x + 3 + 2(3x + 8) - 3x = 3(4x + 11) - 4(x - 1)\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-16">
+<p class="admonition-title"><span class="caption-number">Opgave 3.5 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er en ligning, der er løst forkert. Nedenfor kan du se de fire trin, der er lavet for at løse den.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                               &amp;   -(4-x) + 2(4 + 5x) &amp;= 12x - 4 - (-14 - 2x)  &amp;       &amp; \\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   4+x+8+10x &amp;= 12x-4+14-2x                    &amp;       &amp;\text{Trin 1}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   12+11x &amp;= 10x+18                            &amp;       &amp;\text{Trin 2}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   21x &amp;= 8                                    &amp;       &amp;\text{Trin 3}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   x &amp;= \frac{21}{8}                           &amp;       &amp;\text{Trin 4}
+\end{align*}
+\end{split}\]</div>
+<p>    a) Undersøg hvert trin, find fejlene og beskriv dem. <br />
+    b) Ret fejlene, så du finder den rigtige løsning til ligningen.</p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-17">
+<p class="admonition-title"><span class="caption-number">Opgave 3.6 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Givet er en ligning, der er løst forkert. Nedenfor kan du se de fem trin, der er lavet for at løse den.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;                               &amp;   3(8-(3x+5))+5+3x &amp;= 2x+10                   &amp;       &amp; \\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   3(8+3x-5)+5+3x &amp;= 2x+10                     &amp;       &amp;\text{Trin 1}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   24+9x-15+5+3x &amp;= 2x+10                      &amp;       &amp;\text{Trin 2}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   4+12x &amp;= 2x+10                              &amp;       &amp;\text{Trin 3}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   14x &amp;= 14                                   &amp;       &amp;\text{Trin 4}\\
+&amp;\stackrel{?}{\Leftrightarrow}  &amp;   x &amp;= 1                                      &amp;       &amp;\text{Trin 5}
+\end{align*}
+\end{split}\]</div>
+<p>    a) Undersøg hvert trin, find fejlene og beskriv dem. <br />
+    b) Ret fejlene, så du finder den rigtige løsning til ligningen.</p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-18">
+<p class="admonition-title"><span class="caption-number">Opgave 3.7 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\frac{2x}{5} + 3 = 7\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(\frac{x}{2} + 1 = 5\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(-(\frac{1x}{3}-1) = \frac{1}{2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(2(5-\frac{x}{8}) = 11\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-19">
+<p class="admonition-title"><span class="caption-number">Opgave 3.8 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\frac{2x}{3}-2x-2(1-2x)=\frac{5x}{3}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(10(\frac{x}{2} + 8 - (2x - 4) + 1) = 2(x-3)\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(-\frac{x}{2} + 3x = -7x - 23 + \frac{x}{2}(2x-4)-x^2\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(-\frac{10x}{3}-2(x-2)=-(2(-7-x)+\frac{6x}{9})\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-20">
+<p class="admonition-title"><span class="caption-number">Opgave 3.9 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\frac{1}{4x+4} = \frac{9+x}{4x+4}\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(\frac{11}{2-x} = \frac{1+x}{4-2x} - \frac{3-x}{-x+2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\frac{x}{2x} + \frac{2}{x} = \frac{x-20}{3x} + \frac{9}{2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(-\frac{x}{2x+x}+13 = -2(\frac{1}{4x+2}-\frac{8}{8+16x})+12\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-21">
+<p class="admonition-title"><span class="caption-number">Opgave 3.10 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(x^3 - 10 = -37\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(x^2 + \frac{9}{4} = \frac{5}{2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(1023 - x^10 = -1 \)</span> <br />
+    c) <span class="math notranslate nohighlight">\(-686 = -2x^3\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-22">
+<p class="admonition-title"><span class="caption-number">Opgave 3.11 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(x^3 - 10 = -37\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(x^2 + \frac{9}{4} = \frac{5}{2}\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(1023 - x^{10} = -1 \)</span> <br />
+    c) <span class="math notranslate nohighlight">\(-686 = -2x^3\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-23">
+<p class="admonition-title"><span class="caption-number">Opgave 3.12 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Bestem grundmængderne for ligningerne og løs dem efterfølgende:</p>
+<p>    a) <span class="math notranslate nohighlight">\(\sqrt{x}+4 = 8\)</span> <br />
+    b) <span class="math notranslate nohighlight">\(3\sqrt[3]{x} - 1 = 64\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\sqrt[4]{16x} = 6\)</span> <br />
+    c) <span class="math notranslate nohighlight">\(\sqrt{4x-24}=2\)</span></p>
+</div>
+</div><div class="proof opgave admonition" id="opgave-24">
+<p class="admonition-title"><span class="caption-number">Opgave 3.13 </span></p>
+<div class="opgave-content section" id="proof-content">
+<p>Betragt ligningen:</p>
+<div class="math notranslate nohighlight">
+\[ \sqrt{4x} = -2 \]</div>
+<p>    a) Bestem ligningens grundmængde. <br />
+    b) Reducer ligningen, så du får <span class="math notranslate nohighlight">\(\sqrt{x} = -1\)</span>. <br />
+    c) Ligningen kan ikke løses, men hvorfor?</p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="32grundmaengder.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">3.2. </span>Grundmængder</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="34toligningertoubekendte.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">3.4. </span>To ligninger med to ubekendte</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
